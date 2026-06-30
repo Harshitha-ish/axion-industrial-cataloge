@@ -125,8 +125,11 @@ h2{
 
 .product-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:30px;
+    max-width:1400px;
+    margin:auto;
+    padding:20px;
 }
 
 .card{
@@ -142,6 +145,24 @@ h2{
     transform:translateY(-10px);
 }
 
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 20px;
+}
+
+.card h3{
+    margin-top:15px;
+    font-size:30px;
+    font-weight:700;
+}
+
+.card p{
+    font-size:18px;
+    line-height:1.6;
+}
 .card i{
     font-size:50px;
     color:#00b4d8;
