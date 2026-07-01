@@ -44,6 +44,12 @@ header{
     letter-spacing:2px;
 }
 
+.logo img{
+    height:50px;
+    width:auto;
+    display:block;
+}
+
 .nav-links{
     display:flex;
     list-style:none;
