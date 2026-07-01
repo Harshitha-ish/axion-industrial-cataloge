@@ -26,15 +26,18 @@ header{
     background:#0d1b2a;
     z-index:1000;
     box-shadow:0 2px 10px rgba(0,0,0,.2);
+
+    padding:4px 0;
 }
 
 .navbar{
     width:90%;
+    max-width:1200px;
     margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 0;
+    padding:8px 0;
 }
 
 .logo{
@@ -43,7 +46,7 @@ header{
 }
 
 .logo-img{
-    height:120px;
+    height:100px;
     width:auto;
     display:block;
     filter:
