@@ -1,3 +1,7 @@
+html{
+    scroll-behavior:smooth;
+}
+
 *{
     margin:0;
     padding:0;
@@ -142,7 +146,8 @@ h2{
 }
 
 .card:hover{
-    transform:translateY(-10px);
+    transform: translateY(-15px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .card img{
@@ -152,6 +157,14 @@ h2{
     display:block;
     border-radius:10px 10px 0 0;
     margin:0;
+}
+
+.card img{
+    transition:0.4s ease;
+}
+
+.card:hover img{
+    transform:scale(1.05);
 }
 
 .card h3{
@@ -370,3 +383,11 @@ flex-direction:column;
 
 }
 
+@media (max-width:768px){
+
+    .product-grid{
+        grid-template-columns:1fr;
+        padding:100px 15px 60px;
+    }
+
+}
