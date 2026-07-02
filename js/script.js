@@ -23,3 +23,13 @@ if (form) {
         form.reset();
     });
 }
+
+window.onload=function(){
+
+document.querySelector(".close-btn").onclick=function(){
+
+document.getElementById("enquiry-popup").style.display="none";
+
+}
+
+}
