@@ -27,11 +27,10 @@ window.onload = function () {
 
     document.getElementById("popup").style.display = "flex";
 
-    document.querySelector(".close-btn").onclick = function () {
+    document.querySelector(".close-btn").addEventListener("click", function () {
 
         document.getElementById("popup").style.display = "none";
 
-    };
+    });
 
 };
-    
