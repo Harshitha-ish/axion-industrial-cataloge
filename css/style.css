@@ -52,11 +52,11 @@ header{
 }
 
 .nav-links{
+    margin-left:auto;
     display:flex;
     align-items:center;
+    gap:35px;
     list-style:none;
-    gap:45px;
-    margin-left:auto;
 }
 
 .nav-links a{
@@ -74,6 +74,7 @@ header{
 /* Hero */
 
 .hero{
+    padding-top:90px;
     height:100vh;
     background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
     url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80");
@@ -85,8 +86,6 @@ header{
     text-align:center;
     color:#fff;
     padding:20px;
-
-    padding-top:90px;
 }
 
 .hero h1{
