@@ -558,3 +558,37 @@ flex-direction:column;
     color:#888;
     font-size:15px;
 }
+
+/* ===== Brands ===== */
+
+.brands{
+    background:#f8f9fa;
+}
+
+.brand-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.brand-card{
+    background:#fff;
+    border-radius:12px;
+    padding:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.brand-card:hover{
+    transform:translateY(-8px);
+}
+
+.brand-card img{
+    max-width:160px;
+    max-height:80px;
+    object-fit:contain;
+}
