@@ -43,12 +43,15 @@ header{
 .logo{
     display:flex;
     align-items:center;
+    height:80px;
+    overflow:hidden;
 }
 
 .logo-img{
     height:130px;
     width:auto;
     display:block;
+    transform:translateY(-25px);
    
 }
 
