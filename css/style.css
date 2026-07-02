@@ -531,8 +531,8 @@ flex-direction:column;
 /* ===== Popup ===== */
 
 .popup-logo{
-    width:120px;
-    margin-bottom:20px;
+    width:100px;
+    margin-bottom:15px;
 }
 
 .popup-box h2{
