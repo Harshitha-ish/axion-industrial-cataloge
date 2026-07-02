@@ -33,3 +33,15 @@ document.getElementById("enquiry-popup").style.display="none";
 }
 
 }
+
+window.onload = function () {
+
+    document.getElementById("popup").style.display = "flex";
+
+    document.querySelector(".close-btn").onclick = function () {
+
+        document.getElementById("popup").style.display = "none";
+
+    };
+
+};
