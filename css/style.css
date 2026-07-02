@@ -450,17 +450,6 @@ flex-direction:column;
     animation: popup .35s ease;
 }
 
-@keyframes popup{
-    from{
-        transform: translateY(20px) scale(0.9);
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-}
-
 .popup-logo{
     width:140px;
     display:block;
