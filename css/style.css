@@ -522,3 +522,47 @@ flex-direction:column;
     max-height:80px;
     object-fit:contain;
 }
+
+/* ===== Popup ===== */
+
+.popup-logo{
+    width:120px !important;
+    height:auto !important;
+    max-width:120px !important;
+    display:block;
+    margin:0 auto 20px;
+    object-fit:contain;
+}
+
+.popup-box h2{
+    font-size:20px;
+    line-height:1.4;
+    margin-bottom:15px;
+}
+
+.popup-box p{
+    margin-bottom:15px;
+}
+
+.popup-links{
+    margin-top:20px;
+}
+
+.popup-links p{
+    margin:10px 0;
+}
+
+.popup-links a{
+    font-weight:700;
+    color:#000;
+    text-decoration:none;
+}
+
+.close-btn{
+    position:absolute;
+    top:15px;
+    right:18px;
+    font-size:28px;
+    cursor:pointer;
+}
+
