@@ -31,31 +31,30 @@ header{
 .navbar{
     width:90%;
     max-width:1200px;
+    height:80px;
     margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:0;
 }
 
 .logo{
+    position:relative;
     display:flex;
     align-items:center;
-    justify-content:center;
-    height:90px;
 }
 
 .logo-img{
-    height:100px;
+    height:130px;
     width:auto;
-    display:block;
-   
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
 }
 
 .nav-links{
-    display:flex;
-    list-style:none;
-    gap:30px;
+    margin-left:auto;
 }
 
 .nav-links a{
