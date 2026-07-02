@@ -25,12 +25,21 @@ if (form) {
 
 window.onload = function () {
 
-    document.getElementById("popup").style.display = "flex";
+    const popup = document.getElementById("popup");
+    const closeBtn = document.querySelector(".close-btn");
 
-    document.querySelector(".close-btn").addEventListener("click", function () {
+    popup.style.display = "flex";
 
-        document.getElementById("popup").style.display = "none";
-
+    closeBtn.addEventListener("click", function () {
+        popup.style.display = "none";
     });
 
 };
+
+window.addEventListener("click", function (e) {
+
+    if (e.target.id === "popup") {
+        document.getElementById("popup").style.display = "none";
+    }
+
+});
