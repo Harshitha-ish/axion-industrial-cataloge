@@ -22,17 +22,6 @@ if (form) {
         alert("Thank you! Your message has been received.");
         form.reset();
     });
-}
-
-window.onload=function(){
-
-document.querySelector(".close-btn").onclick=function(){
-
-document.getElementById("enquiry-popup").style.display="none";
-
-}
-
-}
 
 window.onload = function () {
 
@@ -45,3 +34,4 @@ window.onload = function () {
     };
 
 };
+    
