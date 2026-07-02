@@ -22,24 +22,28 @@ if (form) {
         alert("Thank you! Your message has been received.");
         form.reset();
     });
+} // <-- IMPORTANT (Missing bracket)
 
+// Popup
 window.onload = function () {
 
     const popup = document.getElementById("popup");
     const closeBtn = document.querySelector(".close-btn");
 
-    popup.style.display = "flex";
+    if (popup) {
+        popup.style.display = "flex";
+    }
 
-    closeBtn.addEventListener("click", function () {
-        popup.style.display = "none";
-    });
-
+    if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+    }
 };
 
+// Close when clicking outside
 window.addEventListener("click", function (e) {
-
     if (e.target.id === "popup") {
         document.getElementById("popup").style.display = "none";
     }
-
 });
