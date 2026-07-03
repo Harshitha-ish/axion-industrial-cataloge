@@ -22,9 +22,11 @@ document.querySelectorAll("form").forEach(form => {
 
         alert("Thank you! We will contact you shortly.");
 
-        document.getElementById("popup").style.display = "none";
+        if(this.closest(".popup-box")){
+            document.getElementById("popup").style.display = "none";
+        }
 
-        form.reset();
+        this.reset();
 
     });
 
@@ -53,3 +55,4 @@ window.addEventListener("click", function (e) {
         document.getElementById("popup").style.display = "none";
     }
 });
+
