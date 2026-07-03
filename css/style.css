@@ -501,22 +501,31 @@ flex-direction:column;
 .popup-overlay{
     position:fixed;
     inset:0;
+
     background:rgba(0,0,0,.45);
+
     display:none;
     justify-content:center;
     align-items:flex-start;
-    padding-top:105px;
+
+    padding:110px 15px 20px;
+
     z-index:99999;
 }
 
 .popup-box{
-    width:92%;
-    max-width:420px;
+    width:100%;
+    max-width:520px;
+    max-height:calc(100vh - 140px);
+
     background:#fff;
-    border-radius:14px;
-    padding:22px;
+    border-radius:18px;
+    padding:22px 24px;
+
     position:relative;
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    overflow-y:auto;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
     animation:popup .35s ease;
 }
 
@@ -551,7 +560,7 @@ flex-direction:column;
 .popup-box p{
     text-align:center;
     color:#666;
-    font-size:14px;
+    font-size:13px;
     margin-bottom:18px;
 }
 
@@ -568,13 +577,13 @@ flex-direction:column;
     font-family:'Poppins',sans-serif;
 }
 
-.popup-form input:focus,
-.popup-form textarea:focus{
-    border-color:#0d6efd;
-}
+.popup-form input,
+.popup-form textarea{
+    width:100%;
+    padding:10px 14px;
 
 .popup-form textarea{
-    height:90px;
+    height:75px;
     resize:none;
 }
 
@@ -661,8 +670,8 @@ to{
 }
 
 .popup-box h2{
-    font-size:19px;
-}
+    font-size:18px;
+}   
 
 .popup-buttons{
     flex-direction:column;
