@@ -1,11 +1,14 @@
-// Smooth scrolling for navigation links
+// =============================
+// Smooth Scroll
+// =============================
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", function (e) {
-        e.preventDefault();
 
         const target = document.querySelector(this.getAttribute("href"));
 
         if (target) {
+            e.preventDefault();
+
             target.scrollIntoView({
                 behavior: "smooth"
             });
@@ -13,27 +16,10 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-// Contact form message
-document.querySelectorAll("form").forEach(form => {
-
-    form.addEventListener("submit", function(e){
-
-        e.preventDefault();
-
-        alert("Thank you! We will contact you shortly.");
-
-        if(this.closest(".popup-box")){
-            document.getElementById("popup").style.display = "none";
-        }
-
-        this.reset();
-
-    });
-
-});
-
+// =============================
 // Popup
-window.onload = function () {
+// =============================
+window.addEventListener("load", () => {
 
     const popup = document.getElementById("popup");
     const closeBtn = document.querySelector(".close-btn");
@@ -43,16 +29,70 @@ window.onload = function () {
     }
 
     if (closeBtn) {
-        closeBtn.addEventListener("click", function () {
+        closeBtn.addEventListener("click", () => {
             popup.style.display = "none";
         });
     }
-};
 
-// Close when clicking outside
-window.addEventListener("click", function (e) {
-    if (e.target.id === "popup") {
-        document.getElementById("popup").style.display = "none";
-    }
 });
 
+// Close popup when clicking outside
+window.addEventListener("click", function (e) {
+
+    const popup = document.getElementById("popup");
+
+    if (e.target === popup) {
+        popup.style.display = "none";
+    }
+
+});
+
+// =============================
+// Popup Form Submit
+// =============================
+const popupForm = document.getElementById("popupForm");
+
+if (popupForm) {
+
+    popupForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const name = document.getElementById("popupName").value.trim();
+        const phone = document.getElementById("popupPhone").value.trim();
+        const email = document.getElementById("popupEmail").value.trim();
+        const message = document.getElementById("popupMessage").value.trim();
+
+        if (name === "" || phone === "") {
+            alert("Please enter Name and Phone Number.");
+            return;
+        }
+
+        alert("Thank you! We will contact you shortly.");
+
+        this.reset();
+
+        document.getElementById("popup").style.display = "none";
+
+    });
+
+}
+
+// =============================
+// Contact Form Submit
+// =============================
+const contactForm = document.querySelector(".contact form");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        alert("Thank you! Your message has been received.");
+
+        this.reset();
+
+    });
+
+}
