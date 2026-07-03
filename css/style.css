@@ -580,15 +580,15 @@ resize:none;
 .popup-form button{
 
 width:90%;
-padding:8px;
+padding:12px;
 background:#0d6efd;
 color:#fff;
 border:none;
 border-radius:8px;
-font-size:10px;
+font-size:12px;
 font-weight:600;
 cursor:pointer;
-margin-top:5px;
+margin-top:8px;
 }
 
 .popup-form button:hover{
@@ -598,7 +598,7 @@ margin-top:5px;
 .popup-buttons{
     display:flex;
     gap:6px;
-    margin-top:6px;
+    margin-top:8px;
 }
 
 .call-btn{
@@ -634,7 +634,7 @@ margin-top:5px;
 }
 
 .popup-buttons i{
-    margin-right:8px;
+    margin-right:10px;
 }
 
 .call-btn i,
