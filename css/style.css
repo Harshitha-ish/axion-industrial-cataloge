@@ -461,39 +461,6 @@ flex-direction:column;
     background:#1ebe5d;
 }
 
-/* ================= POPUP ================= */
-
-/* Overlay */
-.popup-overlay{
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.65);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.popup-box{
-    width:90%;
-    max-width:380px;
-    background:#fff;
-    border-radius:14px;
-    padding:20px;
-    position:relative;
-    text-align:center;
-}
-
-.popup-box textarea{
-    width:100%;
-    height:70px;
-    padding:10px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    resize:none;
-    margin:12px 0;
-}
-
 /* ===== Brands ===== */
 
 .brands{
@@ -528,67 +495,295 @@ flex-direction:column;
     object-fit:contain;
 }
 
-/* ===== Popup ===== */
+/* ================= POPUP ================= */
 
-.popup-logo{
-    width:140px;
-    margin-bottom:25px;
+.popup-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
 }
 
-.popup-box h2{
-    font-size:16px;
-    line-height:1.4;
-    margin:10px 0;
+.popup-box{
+
+    width:90%;
+    max-width:640px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    position:relative;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+
+    animation:popup .35s ease;
 }
 
-.popup-box p{
-    font-size:14px;
-    margin-bottom:12px;
+@keyframes popup{
+
+from{
+
+transform:scale(.9);
+opacity:0;
+
 }
 
-.popup-links{
-    margin-top:20px;
+to{
+
+transform:scale(1);
+opacity:1;
+
 }
 
-.popup-links p{
-    margin:10px 0;
-}
-
-.popup-links{
-    margin-top:15px;
-}
-
-.popup-links p{
-    font-size:16px;
-    color:#333;
-    margin:10px 0;
-}
-
-.popup-links a{
-    color:#0d6efd;
-    text-decoration:underline;
-    font-weight:600;
-    background:none;
-    padding:0;
-    border:none;
-}
-
-.popup-links a:hover{
-    color:#0056b3;
-}
-
-.popup-links small{
-    display:block;
-    margin-top:12px;
-    font-size:13px;
-    color:#666;
 }
 
 .close-btn{
-    position:absolute;
-    top:15px;
-    right:18px;
-    font-size:28px;
-    cursor:pointer;
+
+position:absolute;
+
+right:22px;
+
+top:18px;
+
+font-size:36px;
+
+cursor:pointer;
+
+color:#555;
+
 }
 
+.popup-logo{
+
+width:140px;
+
+margin-bottom:20px;
+
+}
+
+.popup-box h2{
+
+font-size:42px;
+
+font-weight:700;
+
+color:#0d1b2a;
+
+margin-bottom:10px;
+
+}
+
+.popup-subtitle{
+
+font-size:20px;
+
+color:#666;
+
+margin-bottom:25px;
+
+}
+
+.popup-form input{
+
+width:100%;
+
+padding:16px 18px;
+
+font-size:17px;
+
+margin-bottom:15px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+outline:none;
+
+}
+
+.popup-form textarea{
+
+width:100%;
+
+height:130px;
+
+padding:18px;
+
+font-size:17px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+resize:none;
+
+outline:none;
+
+margin-bottom:18px;
+
+}
+
+.popup-form input:focus,
+.popup-form textarea:focus{
+
+border-color:#0d6efd;
+
+}
+
+.popup-form button{
+
+width:100%;
+
+padding:16px;
+
+background:#0d6efd;
+
+border:none;
+
+border-radius:10px;
+
+font-size:18px;
+
+font-weight:600;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.popup-form button:hover{
+
+background:#0056d6;
+
+}
+
+.popup-divider{
+
+margin:28px 0;
+
+position:relative;
+
+}
+
+.popup-divider span{
+
+background:white;
+
+padding:0 15px;
+
+color:#777;
+
+font-size:14px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.popup-divider::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:50%;
+
+width:100%;
+
+height:1px;
+
+background:#ddd;
+
+}
+
+.popup-contact{
+
+display:flex;
+
+gap:15px;
+
+}
+
+.popup-contact a{
+
+flex:1;
+
+padding:15px;
+
+border-radius:10px;
+
+text-decoration:none;
+
+font-weight:600;
+
+font-size:17px;
+
+}
+
+.call-btn{
+
+background:#eef6ff;
+
+color:#0d6efd;
+
+}
+
+.whatsapp-btn{
+
+background:#e8f8eb;
+
+color:#1e8e3e;
+
+}
+
+.popup-note{
+
+margin-top:22px;
+
+font-size:15px;
+
+color:#666;
+
+}
+
+@media(max-width:768px){
+
+.popup-box{
+
+padding:25px;
+
+}
+
+.popup-box h2{
+
+font-size:28px;
+
+}
+
+.popup-subtitle{
+
+font-size:16px;
+
+}
+
+.popup-contact{
+
+flex-direction:column;
+
+}
+
+}
