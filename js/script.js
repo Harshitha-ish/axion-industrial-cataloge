@@ -14,15 +14,21 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 // Contact form message
-const form = document.querySelector("form");
+document.querySelectorAll("form").forEach(form => {
 
-if (form) {
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", function(e){
+
         e.preventDefault();
-        alert("Thank you! Your message has been received.");
+
+        alert("Thank you! We will contact you shortly.");
+
+        document.getElementById("popup").style.display = "none";
+
         form.reset();
+
     });
-} // <-- IMPORTANT (Missing bracket)
+
+});
 
 // Popup
 window.onload = function () {
