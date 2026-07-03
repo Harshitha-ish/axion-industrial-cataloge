@@ -500,30 +500,23 @@ flex-direction:column;
 .popup-overlay{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.65);
+    background:rgba(0,0,0,.55);
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
+    padding-top:110px;   /* Navbar keela start aagum */
     z-index:99999;
 }
 
 .popup-box{
-
     width:90%;
-    max-width:640px;
-
+    max-width:520px;      /* Compact width */
     background:#fff;
-
-    border-radius:20px;
-
-    padding:35px;
-
-    text-align:center;
-
+    border-radius:18px;
+    padding:25px;
     position:relative;
-
-    box-shadow:0 25px 60px rgba(0,0,0,.25);
-
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
     animation:popup .35s ease;
 }
 
@@ -562,51 +555,29 @@ color:#555;
 }
 
 .popup-logo{
-
-width:140px;
-
-margin-bottom:20px;
-
+    width:110px;
+    margin-bottom:15px;
 }
 
 .popup-box h2{
-
-font-size:42px;
-
-font-weight:700;
-
-color:#0d1b2a;
-
-margin-bottom:10px;
-
+    font-size:30px;
+    margin-bottom:10px;
 }
 
 .popup-subtitle{
-
-font-size:20px;
-
-color:#666;
-
-margin-bottom:25px;
-
+    font-size:16px;
+    margin-bottom:18px;
 }
 
-.popup-form input{
+.popup-form input,
+.popup-form textarea{
+    padding:12px 15px;
+    font-size:15px;
+    margin-bottom:12px;
+}
 
-width:100%;
-
-padding:16px 18px;
-
-font-size:17px;
-
-margin-bottom:15px;
-
-border:1px solid #ddd;
-
-border-radius:10px;
-
-outline:none;
-
+.popup-form textarea{
+    height:90px;
 }
 
 .popup-form textarea{
@@ -662,10 +633,9 @@ transition:.3s;
 
 }
 
-.popup-form button:hover{
-
-background:#0056d6;
-
+.popup-form button{
+    padding:13px;
+    font-size:16px;
 }
 
 .popup-divider{
