@@ -577,19 +577,6 @@ flex-direction:column;
     font-family:'Poppins',sans-serif;
 }
 
-.popup-form input,
-.popup-form textarea{
-    width:100%;
-    padding:12px 14px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    font-size:15px;
-    margin-bottom:12px;
-    outline:none;
-    transition:.3s;
-    font-family:'Poppins',sans-serif;
-}
-
 .popup-form textarea{
     height:110px;
     resize:none;
@@ -612,35 +599,44 @@ flex-direction:column;
 
 .popup-buttons{
     display:flex;
-    gap:10px;
-    margin-top:15px;
+    gap:12px;
+    margin-top:18px;
 }
 
-.popup-buttons a{
+.call-btn{
     flex:1;
-    padding:13px;
-    border-radius:10px;
+    background:#0d6efd;
     color:#fff;
     text-decoration:none;
     text-align:center;
-    font-size:16px;
+    padding:13px;
+    border-radius:10px;
     font-weight:600;
+    transition:.3s;
+}
+
+.call-btn:hover{
+    background:#0b5ed7;
 }
 
 .whatsapp-btn{
+    flex:1;
     background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    text-align:center;
+    padding:13px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
 }
 
 .whatsapp-btn:hover{
     background:#1ebe5d;
 }
 
-.call-btn{
-    background:#0d6efd;
-}
-
-.call-btn:hover{
-    background:#084fc7;
+.popup-buttons i{
+    margin-right:8px;
 }
 
 .popup-note{
@@ -683,5 +679,21 @@ to{
 .popup-buttons{
     flex-direction:column;
 }
+    
+.popup-safe{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    margin-top:18px;
+    color:#6b7280;
+    font-size:15px;
+    font-weight:500;
+}
 
+.popup-safe i{
+    color:#6b7280;
+    font-size:18px;
+}
+    
 }
