@@ -498,232 +498,174 @@ flex-direction:column;
 
 /* ================= POPUP ================= */
 
-/* POPUP */
-
 .popup-overlay{
-
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.55);
-
-display:flex;
-justify-content:center;
-align-items:flex-start;
-
-padding-top:110px;
-
-z-index:99999;
-
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:none;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top:105px;
+    z-index:99999;
 }
 
 .popup-box{
+    width:92%;
+    max-width:420px;
+    background:#fff;
+    border-radius:14px;
+    padding:22px;
+    position:relative;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    animation:popup .35s ease;
+}
 
-width:90%;
-max-width:650px;
+.close-btn{
+    position:absolute;
+    top:12px;
+    right:15px;
+    font-size:28px;
+    font-weight:bold;
+    cursor:pointer;
+    color:#444;
+}
 
-background:#fff;
-
-border-radius:18px;
-
-padding:28px;
-
-position:relative;
-
-box-shadow:0 20px 50px rgba(0,0,0,.25);
-
-text-align:center;
-
-animation:popup .3s ease;
-
+.close-btn:hover{
+    color:red;
 }
 
 .popup-logo{
-
-width:120px;
-
-margin-bottom:20px;
-
+    display:block;
+    width:90px;
+    margin:0 auto 12px;
 }
 
 .popup-box h2{
-
-font-size:34px;
-
-margin-bottom:12px;
-
-color:#0d1b2a;
-
+    font-size:22px;
+    text-align:center;
+    color:#0d1b2a;
+    margin-bottom:8px;
+    line-height:1.4;
 }
 
-.popup-subtitle{
-
-font-size:18px;
-
-color:#666;
-
-margin-bottom:25px;
-
-}
-
-.popup-row{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:15px;
-
-margin-bottom:15px;
-
+.popup-box p{
+    text-align:center;
+    color:#666;
+    font-size:14px;
+    margin-bottom:18px;
 }
 
 .popup-form input,
 .popup-form textarea{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+    margin-bottom:12px;
+    outline:none;
+    transition:.3s;
+    font-family:'Poppins',sans-serif;
+}
 
-width:100%;
-
-padding:15px;
-
-border:1px solid #ddd;
-
-border-radius:10px;
-
-font-size:16px;
-
-outline:none;
-
+.popup-form input:focus,
+.popup-form textarea:focus{
+    border-color:#0d6efd;
 }
 
 .popup-form textarea{
-
-height:120px;
-
-resize:none;
-
-margin-bottom:18px;
-
+    height:90px;
+    resize:none;
 }
 
 .popup-form button{
-
-width:100%;
-
-padding:15px;
-
-background:#0d6efd;
-
-border:none;
-
-border-radius:10px;
-
-font-size:18px;
-
-font-weight:600;
-
-color:#fff;
-
-cursor:pointer;
-
-transition:.3s;
-
+    width:100%;
+    padding:12px;
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
 }
 
 .popup-form button:hover{
-
-background:#0b5ed7;
-
+    background:#084fc7;
 }
 
-.popup-contact{
-
-margin-top:18px;
-
-line-height:1.8;
-
+.popup-buttons{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
 }
 
-.popup-contact a{
-
-color:#0d6efd;
-
-font-weight:600;
-
-text-decoration:none;
-
+.popup-buttons a{
+    flex:1;
+    text-align:center;
+    text-decoration:none;
+    padding:11px 0;
+    border-radius:8px;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
 }
 
-.popup-contact small{
-
-display:block;
-
-margin-top:10px;
-
-color:#777;
-
+.whatsapp-btn{
+    background:#25D366;
 }
 
-.close-btn{
+.whatsapp-btn:hover{
+    background:#1ebe5d;
+}
 
-position:absolute;
+.call-btn{
+    background:#0d6efd;
+}
 
-top:18px;
+.call-btn:hover{
+    background:#084fc7;
+}
 
-right:22px;
-
-font-size:34px;
-
-cursor:pointer;
-
-font-weight:bold;
-
+.popup-note{
+    margin-top:12px;
+    text-align:center;
+    font-size:12px;
+    color:#777;
 }
 
 @keyframes popup{
 
 from{
-
-transform:translateY(-40px);
-
-opacity:0;
-
+    transform:translateY(-40px);
+    opacity:0;
 }
 
 to{
-
-transform:translateY(0);
-
-opacity:1;
-
+    transform:translateY(0);
+    opacity:1;
 }
 
 }
 
-@media(max-width:768px){
+@media(max-width:480px){
+
+.popup-overlay{
+    padding-top:90px;
+}
 
 .popup-box{
-
-width:94%;
-
-padding:22px;
-
-}
-
-.popup-row{
-
-grid-template-columns:1fr;
-
+    width:95%;
+    padding:18px;
 }
 
 .popup-box h2{
-
-font-size:26px;
-
+    font-size:19px;
 }
 
-.popup-subtitle{
-
-font-size:15px;
-
+.popup-buttons{
+    flex-direction:column;
 }
 
 }
