@@ -604,7 +604,7 @@ margin-top:8px;
 
 .call-btn,
 .whatsapp-btn{
-    width:180px;      /* Width kammi */
+    width:200px;      /* Width kammi */
     height:48px;
     display:flex;
     justify-content:center;
@@ -627,12 +627,12 @@ margin-top:8px;
 }
 
 .popup-buttons i{
-    margin-right:8px;
+    margin-right:10px;
 }
 
 .call-btn i,
 .whatsapp-btn i{
-    margin-right:8px;
+    margin-right:10px;
 }
 
 .popup-subtitle{
@@ -671,11 +671,11 @@ to{
 
 .popup-box{
     width:90%;
-    padding:12px;
+    padding:14px;
 }
 
 .popup-box h2{
-    font-size:16px;
+    font-size:18px;
     font-weight:600;
     text-align:center;
     color:#0d1b2a;
