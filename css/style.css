@@ -508,7 +508,7 @@ flex-direction:column;
     justify-content:center;
     align-items:flex-start;
 
-    padding-top:85px;
+    padding-top:90px;
 
     z-index:99999;
 }
@@ -608,8 +608,8 @@ margin-top:8px;
     color:#fff;
     text-decoration:none;
     text-align:center;
-    padding:10px;
-    border-radius:8px;
+    padding:16px;
+    border-radius:6px;
     font-weight:600;
     transition:.3s;
 }
@@ -624,8 +624,8 @@ margin-top:8px;
     color:#fff;
     text-decoration:none;
     text-align:center;
-    padding:10px;
-    border-radius:8px;
+    padding:16px;
+    border-radius:6px;
     font-weight:600;
     transition:.3s;
 }
@@ -635,7 +635,7 @@ margin-top:8px;
 }
 
 .popup-buttons i{
-    margin-right:10px;
+    margin-right:8px;
 }
 
 .call-btn i,
