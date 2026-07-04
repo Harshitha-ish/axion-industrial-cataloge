@@ -598,21 +598,26 @@ margin-top:8px;
 
 .popup-buttons{
     display:flex;
-    gap:8px;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
     margin-top:12px;
 }
 
 .call-btn,
 .whatsapp-btn{
-    width:160px;      /* Width kammi */
+    width:180px;
     height:48px;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:6px;
+
+    gap:8px;
+
     border-radius:10px;
     text-decoration:none;
-    font-size:12px;
+    font-size:14px;
     font-weight:600;
 }
 
@@ -690,12 +695,14 @@ to{
 }
 
 .popup-safe{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
 
-margin-top:8px;
-font-size:10px;
-color:#666;
-text-align:center;
-
+    margin-top:15px;
+    width:100%;
+    text-align:center;
 }
 
 .popup-safe i{
