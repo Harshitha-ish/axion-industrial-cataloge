@@ -85,14 +85,16 @@ const contactForm = document.querySelector(".contact form");
 
 if (contactForm) {
 
-    contactForm.addEventListener("submit", function (e) {
+   form.addEventListener("submit", function(e){
 
-        e.preventDefault();
+    e.preventDefault();
 
-        alert("Thank you! Your message has been received.");
+    alert("✅ Thank you! Your enquiry has been submitted successfully.\n\nOur team will contact you shortly.");
 
-        this.reset();
+    this.reset();
 
-    });
+    if(this.closest(".popup-box")){
+        document.getElementById("popup").style.display="none";
+    }
 
-}
+});
