@@ -224,6 +224,8 @@ h2{
 
     box-shadow:0 3px 12px rgba(0,0,0,.06);
 
+    padding:15px;
+    
 }
 
 .card:hover{
@@ -236,20 +238,21 @@ h2{
 
 .card img{
 
-    width:100%;
+    width:85%;          /* Image konjam chinnadha */
+    height:130px;       /* Height reduce */
 
-    height:170px;
+    object-fit:contain; /* Full image show aagum */
 
-    object-fit:cover;
+    display:block;
+
+    margin:18px auto 10px;
 
     transition:.35s;
 
 }
 
 .card:hover img{
-
-    transform:scale(1.04);
-
+    transform:scale(1.02);
 }
 
 .card h3{
