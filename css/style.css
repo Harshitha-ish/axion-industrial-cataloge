@@ -468,7 +468,9 @@ flex-direction:column;
     background:#1ebe5d;
 }
 
-/* ===== Brands ===== */
+/* ===========================
+   BRANDS SECTION
+=========================== */
 
 .brands{
     background:#f8f9fa;
@@ -483,18 +485,18 @@ flex-direction:column;
 
 .brands h2{
     text-align:center;
-    font-size:48px;
+    font-size:42px;
     font-weight:700;
     color:#0d1b2a;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
-.brands .section-subtitle{
-    text-align:left;
-    font-size:18px;
-    font-weight:500;
-    color:#111;
-    margin-bottom:30px;
+.section-subtitle{
+    text-align:center;
+    font-size:22px;
+    font-weight:600;
+    color:#222;
+    margin-bottom:40px;
 }
 
 .brand-grid{
@@ -504,32 +506,91 @@ flex-direction:column;
 }
 
 .brand-card{
-    background:#fff;
-    border:1px solid #ececec;
-    border-radius:10px;
-    height:120px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    transition:.3s;
-    box-shadow:0 3px 12px rgba(0,0,0,.05);
-}
 
-.brand-card img{
-    width:140px;
-    height:55px;
-    object-fit:contain;
+    background:#fff;
+
+    border:1px solid #e8e8e8;
+
+    border-radius:12px;
+
+    height:110px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:15px;
+
+    transition:0.3s ease;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.05);
+
 }
 
 .brand-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+
+}
+
+.brand-card img{
+
+    max-width:135px;
+
+    max-height:55px;
+
+    width:auto;
+
+    height:auto;
+
+    object-fit:contain;
+
+}
+
+@media(max-width:992px){
+
+.brand-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
 }
 
 @media(max-width:768px){
 
 .brand-grid{
+
 grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+}
+
+.brand-card{
+
+height:90px;
+
+padding:10px;
+
+}
+
+.brand-card img{
+
+max-width:110px;
+
+max-height:45px;
+
+}
+
+.section-subtitle{
+
+font-size:18px;
+
 }
 
 }
