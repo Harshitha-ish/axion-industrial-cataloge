@@ -193,6 +193,20 @@ h2{
     margin-bottom:40px;
 }
 
+.product-subtitle{
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:#222;
+
+    margin-bottom:40px;
+
+}
+
 .product-grid{
 
     width:92%;
