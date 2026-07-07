@@ -471,31 +471,42 @@ flex-direction:column;
 /* ===== Brands ===== */
 
 .brands{
-    width:100%;
-    padding:60px 50px;
     background:#f8f9fa;
+    padding:70px 0;
 }
 
-@media (max-width:768px){
-
-.brands{
-    padding:40px 18px;
+.brands .container{
+    width:92%;
+    max-width:1300px;
+    margin:auto;
 }
 
+.brands h2{
+    text-align:center;
+    font-size:48px;
+    font-weight:700;
+    color:#0d1b2a;
+    margin-bottom:20px;
+}
+
+.brands .section-subtitle{
+    text-align:left;
+    font-size:18px;
+    font-weight:500;
+    color:#111;
+    margin-bottom:30px;
 }
 
 .brand-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:20px;
-    max-width:1400px;
-    margin:auto;
 }
 
 .brand-card{
     background:#fff;
-    border:1px solid #e5e5e5;
-    border-radius:12px;
+    border:1px solid #ececec;
+    border-radius:10px;
     height:120px;
     display:flex;
     justify-content:center;
@@ -504,23 +515,23 @@ flex-direction:column;
     box-shadow:0 3px 12px rgba(0,0,0,.05);
 }
 
-.brand-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
-}
-
 .brand-card img{
-    max-width:150px;
-    max-height:55px;
+    width:140px;
+    height:55px;
     object-fit:contain;
 }
 
-.brands .section-subtitle{
-    font-size:30px;
-    font-weight:600;
-    color:#111;
-    text-align:center;
-    margin-bottom:40px;
+.brand-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+@media(max-width:768px){
+
+.brand-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
 }
 
 /* ================= POPUP ================= */
@@ -569,7 +580,7 @@ animation:popup .3s ease;
 
 .popup-logo{
     display:block;
-    width:100px;
+    width:85px;
     margin:0 auto 12px;
 }
 
