@@ -168,8 +168,8 @@ h2{
 }
 
 /*==========================
-ABOUT
-===========================*/
+ABOUT SECTION
+==========================*/
 
 .about{
 
@@ -179,41 +179,15 @@ background:#fff;
 
 }
 
-.about-container{
+.about-header{
 
-width:92%;
+text-align:center;
 
-max-width:1400px;
-
-margin:auto;
-
-display:grid;
-
-grid-template-columns:1.1fr .9fr;
-
-align-items:center;
-
-gap:60px;
+margin-bottom:50px;
 
 }
 
-.about-tag{
-
-font-size:15px;
-
-font-weight:700;
-
-letter-spacing:2px;
-
-color:#0d4ea3;
-
-display:inline-block;
-
-margin-bottom:15px;
-
-}
-
-.about-content h2{
+.about-header h2{
 
 font-size:52px;
 
@@ -221,13 +195,43 @@ font-weight:700;
 
 color:#0d1b2a;
 
-margin-bottom:25px;
+margin-bottom:10px;
+
+letter-spacing:1px;
 
 }
 
-.about-content p{
+.about-header h3{
 
-font-size:18px;
+font-size:28px;
+
+font-weight:600;
+
+color:#0056d6;
+
+}
+
+.about-wrapper{
+
+width:92%;
+
+max-width:1380px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:58% 42%;
+
+gap:50px;
+
+align-items:flex-start;
+
+}
+
+.about-left p{
+
+font-size:17px;
 
 line-height:1.9;
 
@@ -235,35 +239,27 @@ color:#444;
 
 margin-bottom:22px;
 
-}
-
-.about-boxes{
-
-margin-top:40px;
-
-display:flex;
-
-flex-direction:column;
-
-gap:25px;
+text-align:justify;
 
 }
 
-.info-card{
+.about-card{
 
 display:flex;
-
-gap:20px;
 
 align-items:flex-start;
 
+gap:18px;
+
+margin-top:30px;
+
 }
 
-.icon{
+.about-icon{
 
-width:60px;
+width:46px;
 
-height:60px;
+height:46px;
 
 border-radius:50%;
 
@@ -279,35 +275,37 @@ flex-shrink:0;
 
 }
 
-.icon i{
+.about-icon i{
+
+font-size:18px;
 
 color:#fff;
 
-font-size:24px;
-
 }
 
-.info-card h3{
+.about-info h4{
 
-font-size:26px;
+font-size:23px;
 
-margin-bottom:10px;
+font-weight:700;
 
 color:#0d1b2a;
 
+margin-bottom:8px;
+
 }
 
-.info-card p{
+.about-info p{
 
 margin:0;
 
-font-size:17px;
+font-size:16px;
 
 line-height:1.8;
 
 }
 
-.info-card ul{
+.about-info ul{
 
 margin:0;
 
@@ -315,9 +313,9 @@ padding-left:18px;
 
 }
 
-.info-card ul li{
+.about-info li{
 
-font-size:17px;
+font-size:16px;
 
 line-height:1.9;
 
@@ -325,77 +323,213 @@ color:#444;
 
 }
 
-/* IMAGE */
+/*=========================================
+BROCHURE STYLE IMAGE
+=========================================*/
+
+.about-right{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:flex-start;
+
+}
+
+/* Blue diagonal strip */
+
+.about-right::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-55px;
+
+    top:0;
+
+    width:170px;
+
+    height:100%;
+
+    background:#0d4ea3;
+
+    transform:skewX(-22deg);
+
+    z-index:1;
+
+}
+
+/* White strip */
+
+.about-right::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-25px;
+
+    top:0;
+
+    width:45px;
+
+    height:100%;
+
+    background:#fff;
+
+    transform:skewX(-22deg);
+
+    z-index:2;
+
+}
+
+/* Image */
 
 .about-image{
 
-display:flex;
+    position:relative;
 
-justify-content:flex-end;
+    z-index:3;
+
+    overflow:hidden;
 
 }
 
 .about-image img{
 
-width:100%;
+    width:100%;
 
-max-width:480px;
+    max-width:480px;
 
-height:720px;
+    height:690px;
 
-object-fit:cover;
+    object-fit:cover;
 
-clip-path:polygon(28% 0%,100% 0%,100% 100%,0% 100%);
+    display:block;
 
-box-shadow:0 20px 45px rgba(0,0,0,.18);
+    clip-path:polygon(22% 0%,100% 0%,100% 100%,0% 100%);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.20);
+
+    transition:.4s;
 
 }
 
-/* MOBILE */
+.about-image img:hover{
 
-@media(max-width:991px){
+    transform:scale(1.03);
 
-.about-container{
+}
+
+/*=========================
+Responsive
+=========================*/
+
+@media(max-width:1100px){
+
+.about-wrapper{
 
 grid-template-columns:1fr;
 
+gap:40px;
+
 }
 
-.about-image{
-
-order:-1;
+.about-right{
 
 justify-content:center;
 
 }
 
+.about-right::before,
+
+.about-right::after{
+
+display:none;
+
+}
+
 .about-image img{
-
-height:420px;
-
-max-width:100%;
 
 clip-path:none;
 
 border-radius:18px;
 
+height:430px;
+
+max-width:100%;
+
 }
 
-.about-content h2{
+}
+
+@media(max-width:768px){
+
+.about{
+
+padding:70px 0;
+
+}
+
+.about-header h2{
 
 font-size:38px;
 
 }
 
-.about-content p{
+.about-header h3{
+
+font-size:22px;
+
+}
+
+.about-left p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.about-card{
+
+gap:12px;
+
+}
+
+.about-icon{
+
+width:42px;
+
+height:42px;
+
+}
+
+.about-icon i{
 
 font-size:16px;
 
 }
 
-.info-card{
+.about-info h4{
 
-flex-direction:column;
+font-size:20px;
+
+}
+
+.about-info li{
+
+font-size:15px;
+
+}
+
+.about-image img{
+
+height:340px;
 
 }
 
