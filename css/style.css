@@ -321,7 +321,7 @@ RIGHT SIDE TRIANGLE IMAGE
 .about-image{
 
     position:relative;
-    min-height:820px;
+    min-height:850px;
     height:100%;
     overflow:hidden;
 
@@ -332,15 +332,15 @@ RIGHT SIDE TRIANGLE IMAGE
     width:100%;
     height:100%;
     object-fit:cover;
-    object-position:top center;
+    object-position:25% top;
     display:block;
 
-    clip-path:polygon(
-        18% 0%,
-        100% 0%,
-        100% 100%,
-        0% 100%
-    );
+   clip-path: polygon(
+       28% 0,
+       100% 0,
+       100% 100%,
+       0 100%
+   );
 
 }
 
