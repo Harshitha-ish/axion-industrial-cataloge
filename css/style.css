@@ -319,41 +319,24 @@ RIGHT SIDE TRIANGLE IMAGE
 ======================================*/
 
 .about-image{
-
-    position:relative;
-
-    width:100%;
-
-    min-height:850px;
-
-    overflow:hidden;
-
-    border-radius:0;
-
+    position: relative;
+    overflow: hidden;
+    min-height: 760px;   /* height adjust pannalaam */
+    border-radius: 0;
 }
 
 .about-image img{
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-    object-position:top center;
-
-    display:block;
-
-    border-radius:0;
-
-    clip-path:none;
-
-    transition:.4s;
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;   /* Left border visible */
+    display: block;
+    border-radius: 0;
+    transition: .4s ease;
 }
 
 .about-image:hover img{
-
-    transform:scale(1.02);
-
+    transform: scale(1.02);
 }
 
 /* Light Shadow */
