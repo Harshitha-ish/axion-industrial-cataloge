@@ -100,3 +100,35 @@ if (contactForm) {
     });
 
 }
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+const menuToggle = document.getElementById("menu-toggle");
+
+const navLinks = document.getElementById("nav-links");
+
+const navRight = document.getElementById("nav-right");
+
+menuToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+    navRight.classList.toggle("active");
+
+});
+
+/* Close Menu After Click */
+
+document.querySelectorAll("#nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+        navRight.classList.remove("active");
+
+    });
+
+});
