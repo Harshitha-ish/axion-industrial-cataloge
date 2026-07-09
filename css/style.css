@@ -321,9 +321,14 @@ RIGHT SIDE TRIANGLE IMAGE
 .about-image{
 
     position:relative;
+
+    width:100%;
+
     min-height:850px;
-    height:100%;
+
     overflow:hidden;
+
+    border-radius:0;
 
 }
 
@@ -331,22 +336,23 @@ RIGHT SIDE TRIANGLE IMAGE
 
     width:100%;
     height:100%;
+
     object-fit:cover;
-    object-position:25% top;
+    object-position:top center;
+
     display:block;
 
-   clip-path: polygon(
-       28% 0,
-       100% 0,
-       100% 100%,
-       0 100%
-   );
+    border-radius:0;
+
+    clip-path:none;
+
+    transition:.4s;
 
 }
 
 .about-image:hover img{
 
-    transform:scale(1.05);
+    transform:scale(1.02);
 
 }
 
