@@ -47,6 +47,19 @@ header{
     display:flex;
     align-items:center;
     justify-content:space-between;
+    position:relative;
+}
+
+.menu-toggle{
+
+position:absolute;
+
+right:20px;
+
+top:50%;
+
+transform:translateY(-50%);
+   
 }
 
 .logo{
@@ -480,12 +493,21 @@ min-height:320px;
 }
 
 .products .section-subtitle{
-    text-align:center;
-    font-size:16px;
-    color:#555;
-    max-width:700px;
-    margin:10px auto 40px;
-    line-height:1.6;
+
+text-align:center;
+
+font-size:16px;
+
+color:#555;
+
+max-width:850px;
+
+margin:18px auto 45px;
+
+line-height:1.7;
+
+font-weight:400;
+
 }
 
 @media (max-width:768px){
@@ -899,12 +921,19 @@ flex-direction:column;
 
 .brands .section-subtitle{
 
-    text-align:center;
-    font-size:16px;
-    color:#555;
-    max-width:700px;
-    margin:10px auto 40px;
-    line-height:1.6;
+text-align:center;
+
+font-size:16px;
+
+color:#555;
+
+max-width:850px;
+
+margin:18px auto 45px;
+
+line-height:1.7;
+
+font-weight:400;
 
 }
 
@@ -1607,9 +1636,35 @@ display:none;
 
 .menu-toggle{
 
-    display:block;
+    display:none;
 
 }
+
+@media (max-width:768px){
+
+.menu-toggle{
+
+display:block;
+
+position:absolute;
+
+right:20px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+font-size:28px;
+
+color:#fff;
+
+cursor:pointer;
+
+z-index:999;
+
+}
+
+}    
 
 /* Menu */
 
@@ -1700,3 +1755,83 @@ display:none;
 }
 
 }    
+
+/* ===== Mobile Popup ===== */
+
+@media (max-width:768px){
+
+.popup-box{
+
+    width:92%;
+    max-width:340px;
+
+    padding:14px;
+
+    border-radius:12px;
+
+}
+
+.popup-logo{
+
+    width:55px;
+    margin-bottom:8px;
+
+}
+
+.popup-box h2{
+
+    font-size:18px;
+    margin-bottom:6px;
+
+}
+
+.popup-subtitle{
+
+    font-size:13px;
+    margin-bottom:10px;
+
+}
+
+.popup-form input,
+.popup-form textarea{
+
+    padding:10px;
+    font-size:13px;
+    margin-bottom:8px;
+
+}
+
+.popup-form textarea{
+
+    height:70px;
+
+}
+
+.popup-form button{
+
+    height:42px;
+    font-size:14px;
+
+}
+
+.popup-buttons{
+
+    gap:10px;
+
+}
+
+.call-btn,
+.whatsapp-btn{
+
+    height:42px;
+    font-size:13px;
+
+}
+
+.popup-safe{
+
+    font-size:11px;
+
+}
+
+}
