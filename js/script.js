@@ -106,29 +106,27 @@ if (contactForm) {
 ========================================== */
 
 const menuToggle = document.getElementById("menu-toggle");
-
 const navLinks = document.getElementById("nav-links");
-
 const navRight = document.getElementById("nav-right");
 
-menuToggle.addEventListener("click", () => {
+if(menuToggle && navLinks && navRight){
 
-    navLinks.classList.toggle("active");
+    menuToggle.addEventListener("click", () => {
 
-    navRight.classList.toggle("active");
-
-});
-
-/* Close Menu After Click */
-
-document.querySelectorAll("#nav-links a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navLinks.classList.remove("active");
-
-        navRight.classList.remove("active");
+        navLinks.classList.toggle("active");
+        navRight.classList.toggle("active");
 
     });
 
-});
+    document.querySelectorAll("#nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+            navRight.classList.remove("active");
+
+        });
+
+    });
+
+}
