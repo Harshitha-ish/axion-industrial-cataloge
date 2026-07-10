@@ -109,21 +109,27 @@ const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 const navRight = document.getElementById("nav-right");
 
-if(menuToggle && navLinks && navRight){
+if(menuToggle && navLinks){
 
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", ()=>{
 
         navLinks.classList.toggle("active");
-        navRight.classList.toggle("active");
+
+        if(navRight){
+            navRight.classList.toggle("active");
+        }
 
     });
 
-    document.querySelectorAll("#nav-links a").forEach(link => {
+    document.querySelectorAll("#nav-links a").forEach(link=>{
 
-        link.addEventListener("click", () => {
+        link.addEventListener("click",()=>{
 
             navLinks.classList.remove("active");
-            navRight.classList.remove("active");
+
+            if(navRight){
+                navRight.classList.remove("active");
+            }
 
         });
 
