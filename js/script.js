@@ -20,21 +20,28 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
    POPUP
 ========================================== */
 
-window.addEventListener("load", function () {
+window.addEventListener("DOMContentLoaded", function () {
 
     const popup = document.getElementById("popup");
-    const closeBtn = document.querySelector(".close-btn");
-    const popupForm = document.getElementById("popupForm");
 
-    if (popup) {
+    if (!popup) return;
 
-        setTimeout(() => {
+    setTimeout(function () {
 
-            popup.style.display = "flex";
+        popup.style.display = "flex";
 
-        }, 600);
+        popup.style.position = "fixed";
+        popup.style.top = "0";
+        popup.style.left = "0";
+        popup.style.width = "100%";
+        popup.style.height = "100%";
+        popup.style.justifyContent = "center";
+        popup.style.alignItems = "center";
+        popup.style.zIndex = "999999";
 
-    }
+    }, 500);
+
+});
 
     if (closeBtn) {
 
