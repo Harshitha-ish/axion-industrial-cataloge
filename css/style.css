@@ -1501,20 +1501,20 @@ z-index:999;
 .popup-overlay{
 
     position:fixed;
-    inset:0;
 
-    background:rgba(0,0,0,.65);
+    inset:0;
 
     display:none;
 
     justify-content:center;
-    align-items:center;
+
+    align-items:flex-start;
+
+    padding-top:70px;      /* Navbar keela */
+
+    background:rgba(0,0,0,.60);
 
     z-index:999999;
-
-    padding:20px;
-
-    animation:fadeIn .35s ease;
 
 }
 
@@ -1523,29 +1523,31 @@ z-index:999;
     position:relative;
 
     width:100%;
-    max-width:420px;
+    max-width:500px;      /* Agalam konjam perusu */
 
     background:#fff;
 
-    border-radius:18px;
+    border-radius:16px;
 
-    padding:28px;
+    padding:18px 24px;    /* Height kammi */
 
     text-align:center;
 
-    box-shadow:0 25px 60px rgba(0,0,0,.25);
-
-    animation:popupZoom .35s ease;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
 
 }
 
 .popup-logo{
 
-    width:85px;
-
     display:block;
 
-    margin:0 auto 12px;
+    width:130px;      /* Agalam (Width) */
+
+    height:55px;      /* Height kammi */
+
+    object-fit:contain;
+
+    margin:0 auto 10px;
 
 }
 
@@ -1639,23 +1641,19 @@ z-index:999;
 
     width:100%;
 
-    height:50px;
+    height:42px;
 
     border:none;
 
-    border-radius:10px;
+    border-radius:8px;
 
     background:#00b4d8;
 
     color:#fff;
 
-    font-size:17px;
+    font-size:15px;
 
     font-weight:600;
-
-    cursor:pointer;
-
-    transition:.3s;
 
 }
 
@@ -1669,9 +1667,9 @@ z-index:999;
 
     display:flex;
 
-    gap:12px;
+    gap:10px;
 
-    margin-top:15px;
+    margin-top:12px;
 
 }
 
@@ -1679,18 +1677,26 @@ z-index:999;
 
     flex:1;
 
+    height:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
     text-decoration:none;
 
     color:#fff;
 
-    padding:12px;
+    border-radius:8px;
 
-    border-radius:10px;
+    font-size:14px;
 
     font-weight:600;
 
 }
-
+    
 .call-btn{
 
     background:#1d4ed8;
@@ -1705,11 +1711,13 @@ z-index:999;
 
 .popup-safe{
 
-    margin-top:16px;
+    margin-top:10px;
 
-    color:#555;
+    font-size:12px;
 
-    font-size:14px;
+    color:#666;
+
+    text-align:center;
 
 }
 
@@ -1755,17 +1763,21 @@ z-index:999;
 
     .popup-box{
 
-        max-width:330px;
+    max-width:320px;
 
-        padding:20px;
+    padding:15px;
 
-        border-radius:16px;
+    border-radius:12px;
 
-    }
+   }
 
-    .popup-logo{
+  .popup-logo{
 
-        width:65px;
+    width:95px;
+
+    height:40px;
+
+    object-fit:contain;
 
     }
 
@@ -1796,18 +1808,30 @@ z-index:999;
 
     }
 
-    .popup-form button{
+   .popup-buttons{
 
-        height:44px;
+    display:flex;
 
-        font-size:14px;
+    flex-direction:row;   /* Ore line */
 
-    }
+    gap:8px;
 
-    .popup-buttons{
+}
 
-        flex-direction:column;
+.popup-buttons a{
 
-    }
+    height:36px;
+
+    font-size:12px;
+
+}
+
+.popup-form button{
+
+    height:40px;
+
+    font-size:13px;
+
+}
 
 }
