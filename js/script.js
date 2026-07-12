@@ -82,7 +82,7 @@ if(menuToggle && navLinks){
 document.addEventListener("DOMContentLoaded", function () {
 
     const popup = document.getElementById("popup");
-    const closeBtn = document.querySelector(".close-btn");
+    const closeBtn = popup.querySelector(".close-btn");
     const popupForm = document.getElementById("popupForm");
 
     if (!popup) return;
