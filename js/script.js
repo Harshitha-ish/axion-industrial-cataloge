@@ -100,32 +100,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    /* ==========================
-       Mobile Menu
-    ========================== */
+    /* ===========================
+        MOBILE MENU
+     =========================== */
 
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.querySelector(".navbar");
 
-    if (menuToggle && navLinks) {
+if(menuToggle){
 
-        menuToggle.addEventListener("click", function () {
+    menuToggle.addEventListener("click",()=>{
 
-            navLinks.classList.toggle("active");
+        navbar.classList.toggle("active");
 
-        });
+    });
 
-        document.querySelectorAll("#nav-links a").forEach(link => {
+}
 
-            link.addEventListener("click", function () {
+document.querySelectorAll(".nav-links a").forEach(link=>{
 
-                navLinks.classList.remove("active");
+    link.addEventListener("click",()=>{
 
-            });
+        navbar.classList.remove("active");
 
-        });
-
-    }
+    });
 
 });
-
