@@ -1,1 +1,697 @@
+/* ===========================
+   AXION INDUSTRIAL SOLUTIONS
+=========================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fa;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* ===========================
+CONTAINER
+=========================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ===========================
+HEADER
+=========================== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#081a2c;
+    z-index:9999;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.navbar{
+    height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo img{
+    height:62px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#17c2ea;
+}
+
+.quote-btn{
+    background:#17c2ea;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:600;
+}
+
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+
+    height:100vh;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+
+    url("../images/hero.jpg") center/cover no-repeat;
+
+    display:flex;
+
+    align-items:center;
+
+    color:#fff;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    width:100%;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:24px;
+
+    margin-bottom:35px;
+
+}
+
+.hero-btn{
+
+    display:inline-block;
+
+    background:#17c2ea;
+
+    color:#fff;
+
+    padding:18px 42px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ===========================
+COMMON SECTION
+=========================== */
+
+section{
+
+    padding:90px 0;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:40px;
+
+    margin-bottom:50px;
+
+    color:#081a2c;
+
+}
+
+/* ===========================
+ABOUT
+=========================== */
+
+.about{
+    background:#fff;
+}
+
+.about p{
+    max-width:900px;
+    margin:0 auto 50px;
+    text-align:center;
+    color:#555;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.about-card{
+    background:#fff;
+    border-radius:14px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.about-card:hover{
+    transform:translateY(-8px);
+}
+
+.about-card i{
+    font-size:45px;
+    color:#17c2ea;
+    margin-bottom:20px;
+}
+
+.about-card h3{
+    margin-bottom:12px;
+    color:#081a2c;
+}
+
+.about-card p{
+    margin:0;
+    font-size:15px;
+}
+
+/* ===========================
+PRODUCTS
+=========================== */
+
+.products{
+    background:#f7f9fc;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:28px;
+}
+
+.product-card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+    text-align:center;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+}
+
+.product-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.product-card h3{
+    padding:22px;
+    color:#081a2c;
+}
+
+/* ===========================
+BRANDS
+=========================== */
+
+.brands{
+    background:#fff;
+}
+
+.brand-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+}
+
+.brand-card{
+    background:#fff;
+    border:2px solid #17c2ea;
+    border-radius:12px;
+    padding:35px 20px;
+    text-align:center;
+    font-size:22px;
+    font-weight:700;
+    color:#081a2c;
+    transition:.3s;
+}
+
+.brand-card:hover{
+    background:#17c2ea;
+    color:#fff;
+}
+
+/* ===========================
+CONTACT
+=========================== */
+
+.contact{
+    background:#f7f9fc;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    background:#fff;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.contact-box p{
+    margin:18px 0;
+    font-size:18px;
+}
+
+.contact-box i{
+    color:#17c2ea;
+    width:30px;
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+footer{
+    background:#081a2c;
+    color:#fff;
+    text-align:center;
+    padding:35px 20px;
+}
+
+.footer-logo img{
+    height:65px;
+    margin-bottom:15px;
+}
+
+footer p{
+    font-size:15px;
+}
+
+/* ===========================
+WHATSAPP FLOAT
+=========================== */
+
+.whatsapp-float{
+
+    position:fixed;
+
+    right:22px;
+
+    bottom:22px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    text-decoration:none;
+
+    z-index:9999;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+POPUP
+=========================== */
+
+.popup-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.60);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    padding:20px;
+
+}
+
+.popup-box{
+
+    width:100%;
+
+    max-width:500px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    text-align:center;
+
+    position:relative;
+
+    animation:popupShow .35s ease;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.25);
+
+}
+
+@keyframes popupShow{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.close-btn{
+
+    position:absolute;
+
+    right:18px;
+
+    top:12px;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    color:#777;
+
+}
+
+.popup-logo{
+
+    width:150px;
+
+    display:block;
+
+    margin:0 auto 12px;
+
+}
+
+.popup-box h2{
+
+    color:#081a2c;
+
+    margin-bottom:10px;
+
+}
+
+.popup-box p{
+
+    color:#666;
+
+    margin-bottom:18px;
+
+}
+
+.popup-box input,
+
+.popup-box textarea{
+
+    width:100%;
+
+    padding:13px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    margin-bottom:12px;
+
+    font-family:Poppins,sans-serif;
+
+}
+
+.popup-box textarea{
+
+    height:90px;
+
+    resize:none;
+
+}
+
+.popup-box button{
+
+    width:100%;
+
+    height:48px;
+
+    border:none;
+
+    background:#17c2ea;
+
+    color:#fff;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.popup-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:15px;
+
+}
+
+.call-btn,
+
+.whatsapp-btn{
+
+    flex:1;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    color:#fff;
+
+    font-weight:600;
+
+}
+
+.call-btn{
+
+    background:#0077ff;
+
+}
+
+.whatsapp-btn{
+
+    background:#25D366;
+
+}
+
+.popup-safe{
+
+    margin-top:15px;
+
+    font-size:13px;
+
+    color:#666;
+
+}
+
+/* ===========================
+MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+header{
+
+    padding:0;
+
+}
+
+.navbar{
+
+    height:70px;
+
+}
+
+.logo img{
+
+    height:48px;
+
+}
+
+nav{
+
+    display:none;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.hero p{
+
+    font-size:17px;
+
+}
+
+.about-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.product-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.brand-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.popup-box{
+
+    max-width:340px;
+
+    padding:18px;
+
+}
+
+.popup-logo{
+
+    width:95px;
+
+}
+
+.popup-box h2{
+
+    font-size:20px;
+
+}
+
+.popup-buttons{
+
+    flex-direction:row;
+
+}
+
+.whatsapp-float{
+
+    width:55px;
+
+    height:55px;
+
+    font-size:28px;
+
+}
+
+}
