@@ -348,21 +348,25 @@ POPUP
 
 .popup-overlay{
 
-    position:fixed;
+display:none;
 
-    inset:0;
+position:fixed;
 
-    background:rgba(0,0,0,.60);
+top:0;
 
-    display:none;
+left:0;
 
-    justify-content:center;
+width:100%;
 
-    align-items:center;
+height:100%;
 
-    z-index:99999;
+background:rgba(0,0,0,.6);
 
-    padding:20px;
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
 
 }
 
