@@ -371,15 +371,17 @@ z-index:99999;
 }
 
 .popup-box{
-    width:520px;
-    max-width:92%;
+    position:fixed;
+    top:75px;              /* Navbar keela start aagum */
+    left:50%;
+    transform:translateX(-50%);
+    width:450px;           /* 520 -> 450 */
+    max-width:90%;
     background:#fff;
-    border-radius:16px;
-    padding:22px 28px;
-    text-align:center;
-    position:relative;
-    box-shadow:0 12px 40px rgba(0,0,0,.25);
-    animation:popupZoom .35s ease;
+    border-radius:14px;
+    padding:18px 22px;
+    box-shadow:0 12px 35px rgba(0,0,0,.25);
+    animation:popupZoom .3s ease;
 }
 
 @keyframes popupShow{
@@ -419,27 +421,27 @@ z-index:99999;
 }
 
 .popup-logo{
-    width:130px;
+    width:100px;
     height:auto;
     display:block;
-    margin:0 auto 10px;
+    margin:0 auto 8px;
 }
 
 .popup-box h2{
-    font-size:24px;
-    margin:8px 0;
+    font-size:20px;
+    margin:6px 0;
 }
 
 .popup-box p{
-    font-size:14px;
-    margin-bottom:15px;
+    font-size:13px;
+    margin-bottom:12px;
     color:#555;
 }
 
 .popup-box input,
 .popup-box textarea{
     width:100%;
-    padding:10px 14px;
+    padding:10px 12px;
     margin-bottom:10px;
     border:1px solid #ddd;
     border-radius:8px;
@@ -448,7 +450,7 @@ z-index:99999;
 
 .popup-box textarea{
 
-    height:90px;
+    height:80px;
 
     resize:none;
 
@@ -460,7 +462,7 @@ z-index:99999;
 
     height:46px;
 
-    padding:11px;
+    padding:10px;
 
     border:none;
 
@@ -481,7 +483,7 @@ z-index:99999;
 .popup-buttons{
     display:flex;
     gap:10px;
-    margin-top:12px;
+    margin-top:10px;
 }
 
 .popup-buttons a{
@@ -896,46 +898,64 @@ nav{
 
 }
 
-@media (max-width:768px){
+@media(max-width:768px){
 
 .popup-box{
 
+    top:65px;
+
     width:92%;
 
-    padding:18px;
+    padding:15px;
 
 }
 
 .popup-logo{
 
-    width:95px;
+    width:80px;
 
 }
 
 .popup-box h2{
 
-    font-size:20px;
+    font-size:18px;
 
 }
 
 .popup-box p{
 
-    font-size:13px;
+    font-size:12px;
+
+    margin-bottom:10px;
 
 }
 
 .popup-box input,
 .popup-box textarea{
 
-    padding:9px;
+    padding:8px 10px;
 
     font-size:13px;
+
+    margin-bottom:8px;
+
+}
+
+.popup-box textarea{
+
+    height:65px;
+
+}
+
+.popup-box button{
+
+    padding:10px;
+
+    font-size:14px;
 
 }
 
 .popup-buttons{
-
-    flex-direction:row;
 
     gap:8px;
 
@@ -943,17 +963,15 @@ nav{
 
 .popup-buttons a{
 
-    font-size:13px;
-
     padding:9px;
+
+    font-size:13px;
 
 }
 
 .popup-safe{
 
     font-size:11px;
-
-    margin-top:10px;
 
 }
 
