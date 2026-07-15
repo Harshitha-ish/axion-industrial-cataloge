@@ -1,108 +1,139 @@
 /* ==========================================
    AXION INDUSTRIAL SOLUTIONS
-   script.js
 ========================================== */
 
-document.addEventListener("DOMContentLoaded", function () {
+/* Smooth Scroll */
 
-    /* ==========================
-       Smooth Scroll
-    ========================== */
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
 
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click",function(e){
 
-        link.addEventListener("click", function (e) {
+        const target=document.querySelector(this.getAttribute("href"));
 
-            const target = document.querySelector(this.getAttribute("href"));
+        if(target){
 
-            if (target) {
+            e.preventDefault();
 
-                e.preventDefault();
+            target.scrollIntoView({
 
-                target.scrollIntoView({
+                behavior:"smooth"
 
-                    behavior: "smooth"
+            });
 
-                });
-
-            }
-
-        });
+        }
 
     });
-
-    /* ==========================================
-   POPUP
-========================================== */
-
-window.addEventListener("load", function(){
-
-    const popup = document.getElementById("popup");
-
-    if(!popup) return;
-
-    setTimeout(function(){
-
-        popup.style.display = "flex";
-
-    },1000);
 
 });
 
-const popupClose = document.querySelector(".close-btn");
+
+/* ==========================================
+   POPUP
+========================================== */
+
+window.onload=function(){
+
+    const popup=document.getElementById("popup");
+
+    if(popup){
+
+        setTimeout(function(){
+
+            popup.style.display="flex";
+
+        },1000);
+
+    }
+
+}
+
+
+const popupClose=document.querySelector(".close-btn");
 
 if(popupClose){
 
-    popupClose.addEventListener("click", function(){
+    popupClose.onclick=function(){
 
-        document.getElementById("popup").style.display = "none";
+        document.getElementById("popup").style.display="none";
 
-    });
+    }
 
 }
-   
-   /* ==========================================
+
+
+const popup=document.getElementById("popup");
+
+if(popup){
+
+    popup.onclick=function(e){
+
+        if(e.target===popup){
+
+            popup.style.display="none";
+
+        }
+
+    }
+
+}
+
+
+const popupForm=document.getElementById("popupForm");
+
+if(popupForm){
+
+popupForm.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("✅ Thank you! Our team will contact you shortly.");
+
+this.reset();
+
+document.getElementById("popup").style.display="none";
+
+});
+
+}
+
+
+
+/* ==========================================
    MOBILE MENU
 ========================================== */
 
-document.addEventListener("DOMContentLoaded", function () {
+const menuToggle=document.getElementById("menu-toggle");
 
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const closeMenu = document.querySelector(".close-menu");
-    const menuLinks = document.querySelectorAll(".mobile-menu a");
+const mobileMenu=document.getElementById("mobile-menu");
 
-    /* Open Menu */
-    if(menuToggle){
+const closeMenu=document.querySelector(".close-menu");
 
-        menuToggle.addEventListener("click", function(){
+if(menuToggle){
 
-            mobileMenu.classList.add("active");
+menuToggle.onclick=function(){
 
-        });
+mobileMenu.classList.add("active");
 
-    }
+}
 
-    /* Close Button */
-    if(closeMenu){
+}
 
-        closeMenu.addEventListener("click", function(){
+if(closeMenu){
 
-            mobileMenu.classList.remove("active");
+closeMenu.onclick=function(){
 
-        });
+mobileMenu.classList.remove("active");
 
-    }
+}
 
-    /* Close Menu when clicking any link */
-    menuLinks.forEach(function(link){
+}
 
-        link.addEventListener("click", function(){
+document.querySelectorAll(".mobile-menu a").forEach(link=>{
 
-            mobileMenu.classList.remove("active");
+link.onclick=function(){
 
-        });
+mobileMenu.classList.remove("active");
 
-    });
+}
 
 });
