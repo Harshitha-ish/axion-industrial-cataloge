@@ -28,20 +28,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <body>
 
 <!-- =========================
-HEADER
+HEADER START
 ========================= -->
 
 <header class="header">
 
+    <!-- Logo -->
     <div class="logo">
         <a href="#home">
-           <img src="images/logo-3d.png" alt="Axion Industrial Solutions">
+            <img src="images/logo-3d.png" alt="Axion Industrial Solutions">
         </a>
     </div>
 
-    <nav class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
 
-        <ul class="nav-links" id="nav-links">
+        <ul class="nav-links">
 
             <li><a href="#home">Home</a></li>
 
@@ -57,24 +59,69 @@ HEADER
 
     </nav>
 
+    <!-- Desktop Right Side -->
     <div class="nav-right">
 
         <a href="tel:+916003401201" class="phone">
+
             <i class="fas fa-phone"></i>
+
             +91 60034 01201
+
         </a>
 
         <a href="#home" class="quote-btn">
+
             Get a Quote
+
         </a>
 
     </div>
 
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
+    <!-- Mobile Menu Button -->
+    <div id="menu-toggle" class="menu-toggle">
+
+        <i class="fas fa-bars"></i>
+
     </div>
 
 </header>
+
+<!-- =========================
+MOBILE MENU
+========================= -->
+
+<div id="mobile-menu" class="mobile-menu">
+
+    <span class="close-menu">&times;</span>
+
+    <ul>
+
+        <li><a href="#home">Home</a></li>
+
+        <li><a href="#about">About Us</a></li>
+
+        <li><a href="#products">Products</a></li>
+
+        <li><a href="#brands">Brands</a></li>
+
+        <li><a href="#contact">Contact Us</a></li>
+
+    </ul>
+
+    <!-- Phone number mobile-la show aagadhu -->
+
+    <a href="#home" class="mobile-quote-btn">
+
+        Get a Quote
+
+    </a>
+
+</div>
+
+<!-- =========================
+HEADER END
+========================= -->
     
 <!-- =========================
 HERO
@@ -314,7 +361,7 @@ ENQUIRY POPUP
 
 <span class="close-btn">&times;</span>
 
-<img src="images/logo.png" class="popup-logo">
+<img src="images/logo-3d.png" alt="Axion Industrial Solutions" class="popup-logo">
 
 <h2>Need Industrial Solutions?</h2>
 
