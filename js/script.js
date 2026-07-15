@@ -31,97 +31,77 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    /* ==========================
-       Popup
-    ========================== */
+    /* ==========================================
+   POPUP
+========================================== */
+
+window.addEventListener("load", function(){
 
     const popup = document.getElementById("popup");
-    const popupForm = document.getElementById("popupForm");
-    const closeBtn = document.querySelector(".close-btn");
 
-    if (popup) {
+    if(!popup) return;
 
-        setTimeout(function () {
+    setTimeout(function(){
 
-            popup.style.display = "flex";
+        popup.style.display = "flex";
 
-        }, 1200);
+    },1000);
 
-    }
+});
 
-    if (closeBtn) {
+const popupClose = document.querySelector(".close-btn");
 
-        closeBtn.addEventListener("click", function () {
+if(popupClose){
 
-            popup.style.display = "none";
+    popupClose.addEventListener("click", function(){
 
-        });
-
-    }
-
-    if (popup) {
-
-        popup.addEventListener("click", function (e) {
-
-            if (e.target === popup) {
-
-                popup.style.display = "none";
-
-            }
-
-        });
-
-    }
-
-    if (popupForm) {
-
-        popupForm.addEventListener("submit", function (e) {
-
-            e.preventDefault();
-
-            const name = document.getElementById("popupName").value.trim();
-            const phone = document.getElementById("popupPhone").value.trim();
-
-            if (name === "" || phone === "") {
-
-                alert("Please enter your Name and Phone Number.");
-
-                return;
-
-            }
-
-            alert("Thank you! Our team will contact you shortly.");
-
-            popupForm.reset();
-
-            popup.style.display = "none";
-
-        });
-
-    }
-
-    /* ===========================
-        MOBILE MENU
-     =========================== */
-
-const menuToggle = document.getElementById("menu-toggle");
-const navbar = document.querySelector(".navbar");
-
-if(menuToggle){
-
-    menuToggle.addEventListener("click",()=>{
-
-        navbar.classList.toggle("active");
+        document.getElementById("popup").style.display = "none";
 
     });
 
 }
+   
+   /* ==========================================
+   MOBILE MENU
+========================================== */
 
-document.querySelectorAll(".nav-links a").forEach(link=>{
+document.addEventListener("DOMContentLoaded", function () {
 
-    link.addEventListener("click",()=>{
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeMenu = document.querySelector(".close-menu");
+    const menuLinks = document.querySelectorAll(".mobile-menu a");
 
-        navbar.classList.remove("active");
+    /* Open Menu */
+    if(menuToggle){
+
+        menuToggle.addEventListener("click", function(){
+
+            mobileMenu.classList.add("active");
+
+        });
+
+    }
+
+    /* Close Button */
+    if(closeMenu){
+
+        closeMenu.addEventListener("click", function(){
+
+            mobileMenu.classList.remove("active");
+
+        });
+
+    }
+
+    /* Close Menu when clicking any link */
+    menuLinks.forEach(function(link){
+
+        link.addEventListener("click", function(){
+
+            mobileMenu.classList.remove("active");
+
+        });
 
     });
 
