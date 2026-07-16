@@ -374,7 +374,7 @@ z-index:99999;
 
     position:fixed;
 
-    top:80px;
+    top:70px;
 
     left:50%;
 
@@ -388,7 +388,7 @@ z-index:99999;
 
     border-radius:12px;
 
-    padding:16px 20px;
+    padding:14px 18px;
 
     box-shadow:0 10px 30px rgba(0,0,0,.25);
 
@@ -466,13 +466,19 @@ z-index:99999;
 
     width:100%;
 
-    padding:9px 12px;
+    height:44px;
 
-    margin-bottom:8px;
+    border:2px solid #333;
 
     border-radius:8px;
 
+    padding:0 12px;
+
+    margin-bottom:8px;
+
     font-size:14px;
+
+    transition:.3s;
 
 }
 
@@ -480,7 +486,18 @@ z-index:99999;
 
     height:70px;
 
+    padding-top:12px;
+
     resize:none;
+
+}
+
+.popup-box input:focus,
+.popup-box textarea:focus{
+
+    border-color:#17c2ea;
+
+    outline:none;
 
 }
 
@@ -488,7 +505,7 @@ z-index:99999;
 
     width:90%;
 
-    height:46px;
+    height:44px;
 
     padding:10px;
 
@@ -512,7 +529,9 @@ z-index:99999;
 
     display:flex;
 
-    gap:8px;
+    justify-content:center;
+
+    gap:6px;
 
     margin-top:10px;
 
@@ -520,13 +539,21 @@ z-index:99999;
 
 .popup-buttons a{
 
-    flex:1;
+    width:150px;
 
-    padding:8px;
+    height:44px;
 
-    font-size:12px;
+    display:flex;
 
-    text-align:center;
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    font-weight:600;
 
 }
 
@@ -566,9 +593,9 @@ z-index:99999;
 
     text-align:center;
 
-    font-size:12px;
+    font-size:13px;
 
-    margin-top:12px;
+    margin-top:10px;
 
     color:#666;
 
@@ -938,48 +965,55 @@ nav{
 
 .popup-box{
 
-    width:92%;
+    width:90%;
 
     top:70px;
 
-    padding:12px;
+    padding:10px;
 
 }
 
 .popup-logo{
 
-    width:75px;
+    width:70px;
 
 }
 
 .popup-box h2{
 
     font-size:16px;
+    margin:6px 0;
 
 }
 
 .popup-box p{
 
     font-size:12px;
+    margin-bottom:6px;
 
 }
 
-.popup-box input,
-.popup-box textarea{
+.popup-box input{
 
-    padding:8px 10px;
+    height:40px;
 
-    font-size:13px;
+    margin-bottom:6px;
+
+    font-size:12px;
 
 }
 
 .popup-box textarea{
 
-    height:55px;
+    height:52px;
+
+    font-size:12px;
 
 }
 
 .popup-box button{
+
+    height:40px;
 
     padding:8px;
 
@@ -1004,7 +1038,9 @@ nav{
 .popup-safe{
 
     font-size:10px;
-
+   
+    margin-top:6px;
+   
 }
 
 }
