@@ -374,8 +374,6 @@ z-index:99999;
 
     position:fixed;
 
-    top:70px;
-
     left:50%;
 
     transform:translateX(-50%);
@@ -384,7 +382,7 @@ z-index:99999;
 
     max-width:85%;
 
-    margin-top:75px;
+    margin-top:65px;
 
     background:#fff;
 
