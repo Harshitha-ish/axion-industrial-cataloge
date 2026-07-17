@@ -203,8 +203,11 @@ section h2{
 }
 
 .about-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
 }
 
 .about-icon{
@@ -262,7 +265,11 @@ section h2{
 }
 
 .counter-card:hover{
-    transform:translateY(-8px);
+
+    transform:translateY(-10px);
+
+    background:#0852b5;
+
 }
 
 .counter-card h3{
@@ -293,6 +300,16 @@ section h2{
     display:flex;
     align-items:center;
     gap:10px;
+    transition:.35s;
+    cursor:pointer;
+}
+
+.about-badge:hover{
+
+    transform:translateY(-8px);
+
+    background:#00b8ff;
+
 }
 
 .about-badge i{
@@ -312,6 +329,13 @@ section h2{
     object-fit:cover;
     border-radius:20px;
     display:block;
+    transition:transform .6s ease;
+}
+
+.about-image:hover img{
+
+    transform:scale(1.08);
+
 }
 
 /* White + Blue Border */
@@ -1289,5 +1313,23 @@ nav{
     margin-top:6px;
    
 }
+
+}
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
 
 }
