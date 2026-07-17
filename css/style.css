@@ -1250,80 +1250,41 @@ margin-right:-60px;
    PART 3 - BADGES + FINAL ALIGNMENT
 ===================================================== */
 
-/* =========================
-BADGES
-========================= */
+/* ===== BADGES ===== */
 
-.about-badges{
-
+.badges{
     display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
 
-    justify-content:flex-start;
-
+.badge{
+    display:flex;
     align-items:center;
-
     gap:12px;
 
-    margin-top:18px;
+    background:#0b4ea2;
+    color:#fff;
 
-    flex-wrap:nowrap;
+    padding:18px 30px;      /* Increase padding */
+    border-radius:50px;
 
+    font-size:22px;         /* Bigger text */
+    font-weight:700;
+
+    box-shadow:0 8px 18px rgba(0,0,0,0.15);
+    transition:0.3s ease;
 }
 
-/* Badge */
-
-.about-badge{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:8px;
-
-    padding:10px 18px;
-
-    background:#0B4EA2;
-
-    color:#ffffff;
-
-    border-radius:40px;
-
-    font-size:14px;
-
-    font-weight:600;
-
-    transition:.35s;
-
-    cursor:pointer;
-
-    white-space:nowrap;
-
-    box-shadow:0 8px 20px rgba(11,78,162,.18);
-
+.badge i{
+    font-size:28px;         /* Bigger icon */
+    color:#36d6ff;
 }
 
-/* Badge Icon */
-
-.about-badge i{
-
-    font-size:16px;
-
-    color:#39d7ff;
-
-}
-
-/* Hover */
-
-.about-badge:hover{
-
-    background:#18b6ea;
-
-    transform:translateY(-4px);
-
-    box-shadow:0 14px 28px rgba(0,0,0,.18);
-
+.badge:hover{
+    transform:translateY(-6px);
+    background:#083d80;
 }
 
 /* =========================
@@ -1592,26 +1553,22 @@ border-radius:18px;
 
 }
 
-.about-badges{
+@media (max-width:768px){
 
-flex-direction:column;
-
-gap:10px;
-
-margin-top:18px;
-
+.badges{
+    justify-content:center;
+    gap:15px;
 }
 
-.about-badge{
+.badge{
+    width:100%;
+    justify-content:center;
+    font-size:18px;
+    padding:16px 20px;
+}
 
-width:100%;
-
-justify-content:center;
-
-font-size:14px;
-
-padding:12px;
-
+.badge i{
+    font-size:24px;
 }
 
 }
@@ -1662,9 +1619,9 @@ font-size:13px;
 
 .about-badge{
 
-font-size:13px;
+font-size:18px;
 
-padding:10px;
+padding:16px;
 
 }
 
