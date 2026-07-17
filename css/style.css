@@ -1028,7 +1028,7 @@ TITLE
 
     font-size:52px;
 
-    color:#0B4EA2;
+    color:#111111;   /* Black */
 
     font-weight:800;
 
@@ -1043,15 +1043,10 @@ LAYOUT
 ========================= */
 
 .about-content{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:flex-start;
-
-    gap:45px;
-
+    gap:45px;               /* sentence & image gap only */
 }
 
 /* =========================
@@ -1059,9 +1054,9 @@ LEFT SIDE
 ========================= */
 
 .about-left{
-
+   
     width:56%;
-
+    flex:0 0 56%;
 }
 
 .about-text{
@@ -1095,34 +1090,45 @@ RIGHT IMAGE
 ========================= */
 
 .about-right{
-
-    width:44%;
-
-    position:relative;
-
+    flex:0 0 44%;
+    display:flex;
+    justify-content:flex-end;
+    align-self:stretch;      /* left content height follow pannum */
 }
 
 .about-right img{
 
     width:100%;
 
-    height:680px;
+    height:100%;
+
+    min-height:920px;      /* Badge mudiyura varaikkum */
 
     object-fit:cover;
 
-    border-radius:22px;
-
     display:block;
 
-    transition:.45s;
+    border-radius:28px 0 0 28px;   /* Right side straight */
 
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    margin-right:-70px;            /* Right edge touch */
+
+    box-shadow:0 18px 45px rgba(0,0,0,.18);
 
 }
 
 .about-right:hover img{
 
     transform:scale(1.03);
+
+}
+
+@media(min-width:1200px){
+
+.about-right{
+
+margin-right:-60px;
+
+}
 
 }
 
@@ -1521,15 +1527,23 @@ width:55%;
 
 }
 
+@media(max-width:992px){
+
 .about-right{
 
-width:45%;
+margin-right:0;
 
 }
 
 .about-right img{
 
-height:620px;
+min-height:420px;
+
+margin-right:0;
+
+border-radius:22px;
+
+}
 
 }
 
