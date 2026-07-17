@@ -1091,7 +1091,7 @@ RIGHT IMAGE
 
 .about-right img{
     width: 100%;
-    height: 680px;
+    height: 650px;
     object-fit: cover;
     display: block;
     border-radius: 25px 0 0 25px;
@@ -1354,7 +1354,7 @@ IMAGE HEIGHT MATCH
 
     width:100%;
 
-    height:900px;    
+    height:680px;    
 
     object-fit:cover;
 
