@@ -1788,3 +1788,31 @@ padding:10px;
 }
 
 }
+
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
+
+.about-text,
+.vm-card,
+.about-badges,
+.about-right{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .8s ease;
+
+}
+
+.about-text.active,
+.vm-card.active,
+.about-badges.active,
+.about-right.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
