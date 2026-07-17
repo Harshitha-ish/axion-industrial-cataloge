@@ -142,26 +142,26 @@ mobileMenu.classList.remove("active");
 ABOUT SCROLL ANIMATION
 ========================================== */
 
-const reveals = document.querySelectorAll(".reveal");
+const reveals=document.querySelectorAll(".reveal");
 
 function revealAnimation(){
 
-    reveals.forEach(item=>{
+reveals.forEach(item=>{
 
-        const top=item.getBoundingClientRect().top;
+const top=item.getBoundingClientRect().top;
 
-        const height=window.innerHeight;
+const height=window.innerHeight;
 
-        if(top < height-120){
+if(top<height-120){
 
-            item.classList.add("active");
-
-        }
-
-    });
+item.classList.add("active");
 
 }
 
-window.addEventListener("scroll", revealAnimation);
+});
+
+}
+
+window.addEventListener("scroll",revealAnimation);
 
 revealAnimation();
