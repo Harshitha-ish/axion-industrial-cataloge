@@ -130,100 +130,134 @@ section h2{
 
 }
 
-/*=========================================
-ABOUT SECTION
-=========================================*/
+/* ==========================================
+   ABOUT SECTION
+========================================== */
 
 .about{
     padding:90px 0;
-    background:#fff;
+    background:#ffffff;
 }
 
 .about .container{
     width:90%;
-    max-width:1350px;
+    max-width:1300px;
     margin:auto;
 }
 
-/* Heading */
+/* ---------- Title ---------- */
 
-.about-heading{
+.about-title{
     text-align:center;
-    margin-bottom:60px;
+    margin-bottom:55px;
 }
 
-.about-heading h2{
-    font-size:54px;
-    color:#0B3C84;
+.about-title h2{
+    font-size:46px;
     font-weight:800;
+    color:#0b3c84;
+    margin-bottom:10px;
     letter-spacing:1px;
 }
 
-/* Layout */
+.about-title p{
+    color:#666;
+    font-size:18px;
+}
+
+/* ---------- Layout ---------- */
 
 .about-wrapper{
     display:grid;
-    grid-template-columns:1.05fr 0.95fr;
+    grid-template-columns:1.15fr .85fr;
+    gap:60px;
     align-items:center;
-    gap:70px;
 }
 
-/* LEFT */
+/* ---------- Left ---------- */
 
-.about-left{
+.about-content h3{
+    font-size:34px;
+    color:#0b3c84;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    font-size:17px;
+    line-height:1.9;
+    color:#555;
+    margin-bottom:20px;
+}
+
+/* ---------- Vision Mission ---------- */
+
+.about-card{
     display:flex;
-    flex-direction:column;
+    gap:20px;
+    padding:24px;
+    background:#f8fbff;
+    border-left:5px solid #00b7ff;
+    border-radius:12px;
+    margin-top:25px;
+    transition:.3s;
+}
+
+.about-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.about-icon{
+    width:65px;
+    height:65px;
+    min-width:65px;
+    border-radius:50%;
+    background:#0b3c84;
+    display:flex;
+    align-items:center;
     justify-content:center;
 }
 
-.about-left p{
-    font-size:22px;
-    line-height:2;
-    color:#444;
-    margin-bottom:28px;
-}
-
-/* BADGES */
-
-.about-badges{
-    display:flex;
-    gap:18px;
-    flex-wrap:wrap;
-    margin:30px 0;
-}
-
-.badge{
-    background:#0B3C84;
+.about-icon i{
     color:#fff;
-    padding:12px 24px;
-    border-radius:40px;
-    font-size:15px;
-    font-weight:600;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    font-size:26px;
 }
 
-.badge i{
-    color:#00c6ff;
+.about-text h4{
+    color:#0b3c84;
+    font-size:22px;
+    margin-bottom:12px;
 }
 
-/* COUNTERS */
+.about-text p{
+    margin:0;
+}
 
-.counter-box{
+.about-text ul{
+    margin:0;
+    padding-left:20px;
+}
+
+.about-text li{
+    margin-bottom:10px;
+    color:#555;
+}
+
+/* ---------- Counter ---------- */
+
+.counter-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(4,1fr);
     gap:18px;
-    margin:35px 0;
+    margin-top:35px;
 }
 
 .counter-card{
-    background:#0B3C84;
+    background:#0b3c84;
     color:#fff;
+    padding:24px;
+    border-radius:14px;
     text-align:center;
-    padding:22px;
-    border-radius:16px;
     transition:.3s;
 }
 
@@ -232,171 +266,163 @@ ABOUT SECTION
 }
 
 .counter-card h3{
-    font-size:36px;
-    color:#00c6ff;
+    color:#00c8ff;
+    font-size:34px;
     margin-bottom:8px;
 }
 
-.counter-card p{
+.counter-card span{
     font-size:15px;
-    margin:0;
+}
+
+/* ---------- Badges ---------- */
+
+.about-badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:35px;
+}
+
+.about-badge{
+    background:#0b3c84;
     color:#fff;
-}
-
-/* VISION MISSION */
-
-.vm-box{
-    display:flex;
-    flex-direction:column;
-    gap:25px;
-    margin-top:25px;
-}
-
-.vm-card{
-    display:flex;
-    gap:20px;
-    background:#f8fbff;
-    border-left:6px solid #0B3C84;
-    padding:25px;
-    border-radius:14px;
-    transition:.3s;
-}
-
-.vm-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-}
-
-.vm-icon{
-    min-width:70px;
-    height:70px;
-    background:#0B3C84;
-    border-radius:50%;
+    padding:12px 20px;
+    border-radius:40px;
+    font-size:15px;
     display:flex;
     align-items:center;
-    justify-content:center;
+    gap:10px;
 }
 
-.vm-icon i{
-    font-size:30px;
-    color:#fff;
+.about-badge i{
+    color:#00c8ff;
 }
 
-.vm-content h3{
-    color:#0B3C84;
-    margin-bottom:12px;
-    font-size:24px;
-}
+/* ---------- Image ---------- */
 
-.vm-content p{
-    font-size:17px;
-    line-height:1.8;
-    margin:0;
-}
-
-.vm-content ul{
-    margin-top:10px;
-    padding-left:20px;
-}
-
-.vm-content ul li{
-    line-height:2;
-    font-size:17px;
-}
-
-/* RIGHT IMAGE */
-
-.about-right{
+.about-image{
     position:relative;
 }
 
-.about-right img{
+.about-image img{
     width:100%;
-    height:880px;
+    height:100%;
+    min-height:780px;
     object-fit:cover;
-    border-radius:25px;
+    border-radius:20px;
     display:block;
 }
 
-/* WHITE + BLUE BORDER */
+/* White + Blue Border */
 
-.about-right::before{
+.about-image::before{
     content:"";
     position:absolute;
-    left:-25px;
+    right:-22px;
     top:0;
-    width:25px;
+    width:16px;
     height:100%;
-    background:#fff;
+    background:#ffffff;
 }
 
-.about-right::after{
+.about-image::after{
     content:"";
     position:absolute;
-    left:-8px;
+    right:-30px;
     top:0;
     width:8px;
     height:100%;
-    background:#0B3C84;
+    background:#0b3c84;
 }
 
-/* MOBILE */
+/* ---------- Responsive ---------- */
 
 @media(max-width:991px){
 
 .about{
-padding:70px 0;
+    padding:70px 0;
 }
 
 .about-wrapper{
-grid-template-columns:1fr;
-gap:45px;
+    grid-template-columns:1fr;
 }
 
-.about-heading h2{
-font-size:42px;
+.about-image{
+    order:-1;
 }
 
-.about-left p{
-font-size:18px;
-line-height:1.9;
-text-align:center;
+.about-image img{
+    min-height:420px;
+}
+
+.counter-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.about-title h2{
+    font-size:38px;
+}
+
+.about-content{
+    text-align:center;
+}
+
+.about-card{
+    text-align:left;
 }
 
 .about-badges{
-justify-content:center;
+    justify-content:center;
 }
 
-.counter-box{
-grid-template-columns:1fr;
 }
 
-.vm-card{
-flex-direction:column;
-text-align:center;
-align-items:center;
+@media(max-width:768px){
+
+.about-title h2{
+    font-size:32px;
 }
 
-.vm-content ul{
-text-align:left;
+.about-title p{
+    font-size:15px;
 }
 
-.about-right{
-order:-1;
+.about-content h3{
+    font-size:28px;
 }
 
-.about-right img{
-height:500px;
+.about-content p{
+    font-size:15px;
+    line-height:1.8;
 }
 
-.about-right::before{
-width:18px;
-left:-18px;
+.counter-grid{
+    grid-template-columns:1fr;
 }
 
-.about-right::after{
-width:6px;
-left:-6px;
+.about-image img{
+    min-height:320px;
+}
+
+.about-image::before{
+    width:10px;
+    right:-12px;
+}
+
+.about-image::after{
+    width:5px;
+    right:-17px;
+}
+
+.about-card{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.about-text ul{
+    text-align:left;
 }
 
 }
@@ -1263,126 +1289,5 @@ nav{
     margin-top:6px;
    
 }
-
-}
-
-/* ==========================================
-   ABOUT SECTION - MOBILE
-========================================== */
-
-@media (max-width:991px){
-
-.about{
-    padding:70px 20px;
-}
-
-.about-container{
-    grid-template-columns:1fr;
-    gap:40px;
-}
-
-.about-left{
-    text-align:center;
-}
-
-.about-left h2{
-    font-size:38px;
-}
-
-.about-left p{
-    text-align:center;
-    font-size:16px;
-    line-height:30px;
-}
-
-.about-features{
-    justify-content:center;
-}
-
-.about-feature{
-    width:100%;
-}
-
-.about-badges{
-    justify-content:center;
-}
-
-.about-image{
-    order:-1;
-}
-
-.about-image img{
-    height:420px;
-}
-
-.counter-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-
-@media(max-width:768px){
-
-.about{
-    padding:60px 18px;
-}
-
-.about-left h2{
-    font-size:32px;
-}
-
-.about-left p{
-    font-size:15px;
-    line-height:28px;
-}
-
-.about-image img{
-    height:340px;
-}
-
-.counter-grid{
-    grid-template-columns:1fr;
-}
-
-.counter-card{
-    padding:25px;
-}
-
-.about-feature{
-    padding:20px;
-}
-
-.about-feature i{
-    width:55px;
-    height:55px;
-    font-size:22px;
-}
-
-.about-badge{
-    width:100%;
-}
-
-}
-
-/* ==========================================
-   SCROLL ANIMATION
-========================================== */
-
-.hidden{
-
-opacity:0;
-
-transform:translateY(60px);
-
-transition:.8s ease;
-
-}
-
-.show{
-
-opacity:1;
-
-transform:translateY(0);
 
 }
