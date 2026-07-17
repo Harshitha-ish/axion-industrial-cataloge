@@ -1043,10 +1043,10 @@ LAYOUT
 ========================= */
 
 .about-content{
-    display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    align-items: start;
-    gap: 20px;      /* 40px irundha replace pannunga */
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:12px;
 }
 
 /* =========================
@@ -1054,9 +1054,9 @@ LEFT SIDE
 ========================= */
 
 .about-left{
-   
-    width:52%;
-    flex:0 0 54%;
+    flex:0 0 56%;
+    max-width:56%;
+    padding-right:10px;
 }
 
 .about-text{
@@ -1065,18 +1065,11 @@ LEFT SIDE
 
 }
 
-.about-text p{
-
-    font-size:16px;
-
-    color:#444;
-
-    line-height:1.7;
-
-    margin-bottom:16px;
-
+.about-left p{
+    max-width:100%;
     text-align:justify;
-
+    line-height:1.9;
+    margin-bottom:18px;
 }
 
 .about-text strong{
@@ -1090,12 +1083,10 @@ RIGHT IMAGE
 ========================= */
 
 .about-right{
-    flex:0 0 42%;
-    display:flex;
-    justify-content:flex-end;
-    align-self:stretch;      /* left content height follow pannum */
-    margin-right: calc(-50vw + 50%);
-    padding-left: 10px;     /* sentence-ku small gap */
+    flex:0 0 44%;
+    max-width:44%;
+    margin-right:calc(-50vw + 50%);
+    padding-left:0;
 }
 
 .about-right img{
@@ -1103,11 +1094,10 @@ RIGHT IMAGE
     height: 700px;
     object-fit: cover;
     display: block;
-
     border-radius: 25px 0 0 25px;
 
     border-left: 4px solid #ffffff;
-    border-right: 10px solid #0b4ea2;
+    border-right: 6px solid #0b4ea2;
 
     box-shadow: 0 20px 40px rgba(0,0,0,.15);
 }
@@ -1179,146 +1169,72 @@ margin-right:-60px;
    PART 2 - VISION & MISSION
 ===================================================== */
 
-/* Vision & Mission Section */
+/* Vision Mission Row */
 
-.vm-section{
-
+.vm-row{
     display:flex;
-
-    flex-direction:column;
-
     gap:18px;
-
-    margin-top:10px;
-
+    margin-top:20px;
 }
-
-/* Card */
 
 .vm-card{
-
+    flex:1;
     display:flex;
+    gap:15px;
 
-    align-items:flex-start;
+    background:#fff;
+    border-radius:18px;
 
-    gap:16px;
+    padding:20px;
 
-    margin-top:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 
-    min-height:160px;
+    border-left:5px solid #0056b3;
 
-    background:#ffffff;
-
-    padding:18px 20px;
-
-    border-radius:16px;
-
-    border-left:5px solid #0B4EA2;
-
-    box-shadow:0 8px 22px rgba(0,0,0,.08);
-
-    transition:all .35s ease;
-
+    transition:.3s;
 }
-
-/* Hover */
 
 .vm-card:hover{
-
     transform:translateY(-6px);
-
-    box-shadow:0 18px 35px rgba(0,0,0,.14);
-
 }
-
-/* Icon */
 
 .vm-icon{
-
-    width:58px;
-
-    height:58px;
-
-    min-width:60px;
+    width:70px;
+    height:70px;
 
     border-radius:50%;
-
-    background:#0B4EA2;
-
-    color:#ffffff;
+    background:#0056b3;
 
     display:flex;
-
     justify-content:center;
-
-    margin-right:18px;
-
     align-items:center;
 
-    font-size:20px;
+    color:#fff;
+    font-size:28px;
 
-    transition:.5s;
-
-}
-
-/* Rotate Icon */
-
-.vm-card:hover .vm-icon{
-
-    transform:rotate(12deg) scale(1.05);
-
-}
-
-/* Content */
-
-.vm-content{
-
-    flex:1;
-
+    flex-shrink:0;
 }
 
 .vm-content h3{
-
-    font-size:20px;
-
-    color:#0B4EA2;
-
-    font-weight:700;
-
+    color:#0056b3;
+    font-size:32px;
     margin-bottom:10px;
-
 }
 
 .vm-content p{
-
-    font-size:16px;
-
-    line-height:1.8;
-
+    font-size:17px;
+    line-height:1.7;
     color:#555;
-
-    margin:0;
-
 }
 
 .vm-content ul{
-
-    margin:0;
-
-    padding-left:18px;
-
+    margin-left:20px;
 }
 
 .vm-content ul li{
-
+    margin-bottom:8px;
     font-size:16px;
-
     color:#555;
-
-    line-height:1.6;
-
-    margin-bottom:6px;
-
 }
 
 /* Divider */
@@ -1652,53 +1568,19 @@ text-align:left;
 
 }
 
-.vm-card{
+@media(max-width:768px){
 
-flex-direction:column;
-
-align-items:center;
-
-text-align:center;
-
-padding:16px;
-
+.vm-row{
+    flex-direction:column;
 }
 
-.vm-icon{
-
-width:56px;
-
-height:56px;
-
-min-width:56px;
-
-font-size:22px;
-
+.vm-card{
+    width:100%;
 }
 
 .vm-content h3{
-
-font-size:20px;
-
+    font-size:26px;
 }
-
-.vm-content p{
-
-font-size:14px;
-
-}
-
-.vm-content ul{
-
-text-align:left;
-
-padding-left:18px;
-
-}
-
-.vm-content li{
-
-font-size:14px;
 
 }
 
