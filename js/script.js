@@ -138,30 +138,32 @@ mobileMenu.classList.remove("active");
 
 });
 
-/* ==========================================
-ABOUT SCROLL ANIMATION
-========================================== */
+/* =====================================================
+   ABOUT SECTION SCROLL ANIMATION
+===================================================== */
 
-const reveals=document.querySelectorAll(".reveal");
+const revealElements = document.querySelectorAll(
+".about-text, .vm-card, .about-badges, .about-right"
+);
 
-function revealAnimation(){
+function revealOnScroll(){
 
-reveals.forEach(item=>{
+    const windowHeight = window.innerHeight;
 
-const top=item.getBoundingClientRect().top;
+    revealElements.forEach((element)=>{
 
-const height=window.innerHeight;
+        const top = element.getBoundingClientRect().top;
 
-if(top<height-120){
+        if(top < windowHeight - 120){
 
-item.classList.add("active");
+            element.classList.add("active");
+
+        }
+
+    });
 
 }
 
-});
+window.addEventListener("scroll", revealOnScroll);
 
-}
-
-window.addEventListener("scroll",revealAnimation);
-
-revealAnimation();
+revealOnScroll();
