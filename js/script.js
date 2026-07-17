@@ -139,91 +139,29 @@ mobileMenu.classList.remove("active");
 });
 
 /* ==========================================
-   COUNTER
+ABOUT SCROLL ANIMATION
 ========================================== */
 
-const counters=document.querySelectorAll(".counter");
+const reveals = document.querySelectorAll(".reveal");
 
-const speed=200;
+function revealAnimation(){
 
-const counterObserver=new IntersectionObserver(entries=>{
+    reveals.forEach(item=>{
 
-entries.forEach(entry=>{
+        const top=item.getBoundingClientRect().top;
 
-if(entry.isIntersecting){
+        const height=window.innerHeight;
 
-entry.target.querySelectorAll(".counter").forEach(counter=>{
+        if(top < height-120){
 
-const update=()=>{
+            item.classList.add("active");
 
-const target=+counter.getAttribute("data-target");
+        }
 
-const count=+counter.innerText;
-
-const inc=target/speed;
-
-if(count<target){
-
-counter.innerText=Math.ceil(count+inc);
-
-setTimeout(update,10);
-
-}else{
-
-counter.innerText=target;
+    });
 
 }
 
-};
+window.addEventListener("scroll", revealAnimation);
 
-update();
-
-});
-
-counterObserver.unobserve(entry.target);
-
-}
-
-});
-
-});
-
-const counterSection=document.querySelector(".counter-grid");
-
-if(counterSection){
-
-counterObserver.observe(counterSection);
-
-}
-
-/* ==========================================
-   SCROLL ANIMATION
-========================================== */
-
-const revealElements=document.querySelectorAll(
-
-'.about-left,.about-image,.about-feature,.counter-card,.about-badge'
-
-);
-
-const revealObserver=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-},{threshold:0.2});
-
-revealElements.forEach(el=>{
-
-el.classList.add("hidden");
-
-revealObserver.observe(el);
-
-});
+revealAnimation();
