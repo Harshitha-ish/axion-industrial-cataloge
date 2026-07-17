@@ -1553,22 +1553,26 @@ border-radius:18px;
 
 }
 
-@media (max-width:768px){
+.about-badges{
 
-.badges{
-    justify-content:center;
-    gap:15px;
+flex-direction:column;
+
+gap:10px;
+
+margin-top:18px;
+
 }
 
-.badge{
-    width:100%;
-    justify-content:center;
-    font-size:18px;
-    padding:16px 20px;
-}
+.about-badge{
 
-.badge i{
-    font-size:24px;
+width:100%;
+
+justify-content:center;
+
+font-size:14px;
+
+padding:12px;
+
 }
 
 }
@@ -1619,9 +1623,9 @@ font-size:13px;
 
 .about-badge{
 
-font-size:18px;
+font-size:13px;
 
-padding:16px;
+padding:10px;
 
 }
 
