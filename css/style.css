@@ -130,42 +130,429 @@ section h2{
 
 }
 
-/* ===========================
-PRODUCTS
-=========================== */
+/* ===================================================
+PRODUCTS SECTION - PART 1
+=================================================== */
 
-.products{
+.products-section{
+
+    width:100%;
+    padding:80px 6%;
     background:#f7f9fc;
+
 }
 
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:28px;
+.products-container{
+
+    max-width:1400px;
+    margin:auto;
+
 }
+
+/* ==========================
+PRODUCT TITLE
+========================== */
+
+.products-header{
+
+    text-align:center;
+    margin-bottom:50px;
+
+}
+
+.products-title{
+
+    font-size:48px;
+    font-weight:800;
+    color:#0b1f3a;
+    margin-bottom:15px;
+
+}
+
+.products-subtitle{
+
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+    color:#666;
+
+}
+
+/* ==========================
+GRID
+========================== */
+
+.products-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+
+}
+
+/* ==========================
+CARD
+========================== */
 
 .product-card{
+
     background:#fff;
-    border-radius:15px;
+    border-radius:20px;
     overflow:hidden;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-    text-align:center;
+    transition:.35s;
+
 }
 
 .product-card:hover{
+
     transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
+
 }
 
-.product-card img{
+/* ==========================
+IMAGE
+========================== */
+
+.product-image{
+
+    height:210px;
+    overflow:hidden;
+    background:#fff;
+
+}
+
+.product-image img{
+
     width:100%;
-    height:220px;
+    height:100%;
     object-fit:cover;
+    transition:.45s;
+
 }
 
-.product-card h3{
-    padding:22px;
-    color:#081a2c;
+.product-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================
+TEXT
+========================== */
+
+.product-info{
+
+    padding:20px;
+
+}
+
+.product-info h3{
+
+    font-size:21px;
+    color:#0b4ea2;
+    text-align:center;
+    font-weight:700;
+    line-height:1.4;
+
+}
+
+/* ===================================================
+PRODUCTS SECTION - PART 2
+CARD EFFECTS & PREMIUM DESIGN
+=================================================== */
+
+/* Equal Card Height */
+
+.product-card{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    min-height:300px;
+
+    border:1px solid rgba(11,78,162,.08);
+
+    position:relative;
+
+}
+
+/* Top Blue Line */
+
+.product-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:#0B4EA2;
+
+    transform:scaleX(0);
+
+    transition:.35s ease;
+
+}
+
+.product-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/* Image Background */
+
+.product-image{
+
+    background:#f8fbff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:15px;
+
+}
+
+/* Image */
+
+.product-image img{
+
+    max-width:100%;
+    max-height:180px;
+
+    object-fit:contain;
+
+}
+
+/* Product Name */
+
+.product-info{
+
+    padding:16px 18px 22px;
+
+}
+
+.product-info h3{
+
+    margin:0;
+
+    font-size:18px;
+
+    color:#0B4EA2;
+
+    font-weight:700;
+
+    line-height:1.5;
+
+    min-height:54px;
+
+}
+
+/* Hover */
+
+.product-card:hover{
+
+    background:#ffffff;
+
+}
+
+.product-card:hover .product-info h3{
+
+    color:#08408b;
+
+}
+
+/* Smooth */
+
+.product-card,
+.product-image img,
+.product-info h3{
+
+    transition:.35s ease;
+
+}
+
+/* ===================================================
+   PRODUCTS SECTION - PART 3
+   RESPONSIVE + ANIMATION
+=================================================== */
+
+/* ==========================
+   Large Laptop
+========================== */
+
+@media (max-width:1200px){
+
+.products-grid{
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.product-card{
+    min-height:280px;
+}
+
+.product-image{
+    height:180px;
+}
+
+.product-image img{
+    max-height:150px;
+}
+
+.product-info h3{
+    font-size:17px;
+}
+
+.products-title{
+    font-size:42px;
+}
+
+.products-subtitle{
+    font-size:16px;
+}
+
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width:992px){
+
+.products-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.product-card{
+    min-height:260px;
+}
+
+.product-image{
+    height:170px;
+}
+
+.product-image img{
+    max-height:140px;
+}
+
+.product-info{
+    padding:15px;
+}
+
+.product-info h3{
+    font-size:16px;
+}
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:768px){
+
+.products-section{
+    padding:55px 5%;
+}
+
+.products-title{
+    font-size:32px;
+}
+
+.products-subtitle{
+    font-size:14px;
+    line-height:1.7;
+}
+
+.products-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+.product-card{
+    min-height:200px;
+    border-radius:15px;
+}
+
+.product-image{
+    height:110px;
+    padding:10px;
+}
+
+.product-image img{
+    max-height:90px;
+}
+
+.product-info{
+    padding:12px;
+}
+
+.product-info h3{
+    font-size:13px;
+    min-height:38px;
+    line-height:1.4;
+}
+
+}
+
+/* ==========================
+   Small Mobile
+========================== */
+
+@media (max-width:480px){
+
+.products-grid{
+    gap:12px;
+}
+
+.product-card{
+    min-height:185px;
+}
+
+.product-image{
+    height:95px;
+}
+
+.product-image img{
+    max-height:75px;
+}
+
+.product-info h3{
+    font-size:12px;
+}
+
+}
+
+/* ==========================
+   Scroll Animation
+========================== */
+
+.products-header,
+.product-card{
+
+    opacity:0;
+    transform:translateY(35px);
+    transition:all .8s ease;
+
+}
+
+.products-header.active,
+.product-card.active{
+
+    opacity:1;
+    transform:translateY(0);
+
 }
 
 /* ===========================
