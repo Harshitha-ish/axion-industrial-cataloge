@@ -193,3 +193,32 @@ function revealProducts(){
 window.addEventListener("scroll", revealProducts);
 
 revealProducts();
+
+/* =========================================
+   INDUSTRIES WE SERVE
+========================================= */
+
+const industryItems = document.querySelectorAll(
+".industries-title, .industry-item, .industry-image"
+);
+
+function revealIndustries(){
+
+    industryItems.forEach(item=>{
+
+        const top = item.getBoundingClientRect().top;
+
+        if(top < window.innerHeight-80){
+
+            item.classList.add("active");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealIndustries);
+
+revealIndustries();
+
