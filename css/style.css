@@ -1169,80 +1169,71 @@ margin-right:-60px;
    PART 2 - VISION & MISSION
 ===================================================== */
 
-/* Vision Mission Row */
+/* ===== Vision & Mission ===== */
 
-.vm-row{
+.about-cards{
     display:flex;
     gap:18px;
-    margin-top:20px;
+    margin-top:22px;
+    align-items:stretch;
 }
 
-.vm-card{
+.about-card{
     flex:1;
-    display:flex;
-    gap:15px;
-
     background:#fff;
-    border-radius:18px;
-
-    padding:20px;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-    border-left:5px solid #0056b3;
-
-    transition:.3s;
+    border-radius:24px;
+    padding:24px;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    border-left:6px solid #0b5ed7;
+    transition:.35s ease;
 }
 
-.vm-card:hover{
-    transform:translateY(-6px);
+.about-card:hover{
+    transform:translateY(-8px);
 }
 
-.vm-icon{
+.card-top{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:14px;
+}
+
+.card-top i{
     width:70px;
     height:70px;
-
     border-radius:50%;
-    background:#0056b3;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
+    background:#0b5ed7;
     color:#fff;
-    font-size:28px;
-
-    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;   /* icon size small */
 }
 
-.vm-content h3{
-    color:#0056b3;
-    font-size:32px;
-    margin-bottom:10px;
+.card-top h3{
+    font-size:2rem;
+    color:#0b4ea2;
+    margin:0;
+    font-weight:700;
 }
 
-.vm-content p{
-    font-size:17px;
-    line-height:1.7;
-    color:#555;
+.about-card p{
+    font-size:1.12rem;
+    line-height:1.9;
+    color:#444;
 }
 
-.vm-content ul{
-    margin-left:20px;
+.about-card ul{
+    margin:0;
+    padding-left:24px;
 }
 
-.vm-content ul li{
-    margin-bottom:8px;
-    font-size:16px;
-    color:#555;
-}
-
-/* Divider */
-
-.vm-card + .vm-card{
-
-    margin-top:2px;
-
+.about-card li{
+    font-size:1.05rem;
+    line-height:1.9;
+    color:#444;
+    margin-bottom:6px;
 }
 
 /* =====================================================
@@ -1250,41 +1241,41 @@ margin-right:-60px;
    PART 3 - BADGES + FINAL ALIGNMENT
 ===================================================== */
 
-/* ===== BADGES ===== */
+/* ===== Badges ===== */
 
-.badges{
+.about-badges{
     display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-top:30px;
+    justify-content:flex-start;
+    align-items:center;
+    gap:18px;
+    margin-top:25px;
+    flex-wrap:nowrap;
 }
 
-.badge{
+.about-badge{
     display:flex;
     align-items:center;
-    gap:12px;
-
-    background:#0b4ea2;
+    gap:14px;
+    background:linear-gradient(90deg,#0b4ea2,#0f63db);
     color:#fff;
-
-    padding:18px 30px;      /* Increase padding */
-    border-radius:50px;
-
-    font-size:22px;         /* Bigger text */
+    padding:16px 28px;
+    border-radius:18px;
+    min-width:240px;
+    font-size:1.18rem;
     font-weight:700;
-
-    box-shadow:0 8px 18px rgba(0,0,0,0.15);
-    transition:0.3s ease;
+    transition:.35s;
+    box-shadow:0 10px 24px rgba(0,0,0,.15);
 }
 
-.badge i{
-    font-size:28px;         /* Bigger icon */
-    color:#36d6ff;
-}
-
-.badge:hover{
+.about-badge:hover{
     transform:translateY(-6px);
-    background:#083d80;
+}
+
+.about-badge i{
+    font-size:30px;
+    color:#25d9ff;
+    padding-right:16px;
+    border-right:2px solid rgba(255,255,255,.25);
 }
 
 /* =========================
@@ -1562,30 +1553,25 @@ border-radius:18px;
 
 }
 
+@media(max-width:992px){
+
+.about-cards{
+    flex-direction:column;
+}
+
 .about-badges{
-
-flex-direction:column;
-
-gap:10px;
-
-margin-top:18px;
-
+    flex-direction:column;
+    align-items:stretch;
 }
 
 .about-badge{
-
-width:100%;
-
-justify-content:center;
-
-font-size:14px;
-
-padding:12px;
-
+    width:100%;
+    min-width:100%;
+    justify-content:center;
 }
 
 }
-
+   
 /* =======================
 Small Mobile
 ======================= */
