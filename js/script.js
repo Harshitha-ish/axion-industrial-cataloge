@@ -165,3 +165,31 @@ function aboutReveal(){
 window.addEventListener("scroll",aboutReveal);
 
 aboutReveal();
+
+/* ==========================================
+   PRODUCTS SCROLL ANIMATION
+========================================== */
+
+const productItems = document.querySelectorAll(
+".products-header, .product-card"
+);
+
+function revealProducts(){
+
+    productItems.forEach(item=>{
+
+        const top = item.getBoundingClientRect().top;
+
+        if(top < window.innerHeight - 80){
+
+            item.classList.add("active");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealProducts);
+
+revealProducts();
