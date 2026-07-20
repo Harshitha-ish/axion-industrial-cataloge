@@ -560,24 +560,35 @@ CARD EFFECTS & PREMIUM DESIGN
 ==================================================*/
 
 .industries-section{
-    width:100%;
-    background:#ffffff;
-    padding:80px 6%;
+
+    position:relative;
+
     overflow:hidden;
+
+    padding:90px 0;
+
+    background:#fff;
+
 }
 
 .industries-container{
 
-    max-width:1400px;
+    width:100%;
+
+    max-width:1450px;
+
     margin:auto;
 
     display:grid;
-    grid-template-columns:60% 40%;
-    padding-right:0;
-    gap:25px;
 
-   align-items:stretch;
-   position:relative;
+    grid-template-columns:58% 42%;
+
+    align-items:start;
+
+    position:relative;
+
+    overflow:hidden;
+
 }
 
 /*=========================
@@ -640,18 +651,24 @@ RIGHT SIDE IMAGES
 .industries-right{
 
     position:absolute;
+
     top:0;
-    right:0;
-    width:42%;
+
+    right:-55px;          /* pushes image till border */
+
+    width:44%;
+
     height:100%;
 
     display:flex;
+
     flex-direction:column;
 
-    gap:0;                 /* NO GAP */
+    gap:0;
+
+    padding:0;
 
     margin:0;
-    padding:0;
 
 }
 
@@ -659,21 +676,19 @@ RIGHT SIDE IMAGES
 
     flex:1;
 
-    width:100%;
-    height:33.333%;
+    margin:0;
+
+    padding:0;
 
     overflow:hidden;
-
-    margin:0;
-    padding:0;
 
     position:relative;
 
     clip-path:polygon(
-        14% 0,
+        12% 0,
         100% 0,
         100% 100%,
-        14% 100%,
+        12% 100%,
         0 50%
     );
 
@@ -682,11 +697,12 @@ RIGHT SIDE IMAGES
 .industry-image img{
 
     width:100%;
+
     height:100%;
 
-    display:block;
-
     object-fit:cover;
+
+    display:block;
 
     transform:scale(1);
 
@@ -694,7 +710,7 @@ RIGHT SIDE IMAGES
 
 }
 
-/* ONLY LAST IMAGE LITTLE ZOOM */
+/* only third image little zoom */
 
 .industry-image:last-child img{
 
@@ -704,7 +720,7 @@ RIGHT SIDE IMAGES
 
 .industry-image:hover img{
 
-    transform:scale(1.15);
+    transform:scale(1.16);
 
 }
 
@@ -716,7 +732,7 @@ RIGHT SIDE IMAGES
 
     inset:0;
 
-    background:rgba(0,0,0,.06);
+    background:rgba(0,0,0,.05);
 
 }
 
@@ -854,9 +870,9 @@ Mobile
 
     position:relative;
 
-    width:100%;
+    right:0;
 
-    height:auto;
+    width:100%;
 
     display:flex;
 
@@ -868,13 +884,13 @@ Mobile
 
 .industry-image{
 
-    width:100%;
+    height:180px;
 
-    height:170px;
+    width:100%;
 
     clip-path:none;
 
-    border-radius:14px;
+    border-radius:15px;
 
 }
 
@@ -887,13 +903,7 @@ Mobile
     object-fit:cover;
 
 }
-
-.industry-image:last-child img{
-
-    transform:scale(1.08);
-
-}
-
+   
 }
 
 /* =========================
