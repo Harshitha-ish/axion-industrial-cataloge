@@ -674,15 +674,26 @@ RIGHT SIDE IMAGES
 
 .industry-image{
 
-    flex:1;
+    position:relative;
+
+    width:100%;
+    height:230px;
 
     margin:0;
-
     padding:0;
 
     overflow:hidden;
 
-    position:relative;
+    border:none;
+    outline:none;
+
+    border-radius:0;
+
+    box-shadow:none;
+
+    line-height:0;
+
+    display:block;
 
     clip-path:polygon(
         12% 0,
@@ -697,16 +708,28 @@ RIGHT SIDE IMAGES
 .industry-image img{
 
     width:100%;
-
     height:100%;
-
-    object-fit:cover;
 
     display:block;
 
-    transform:scale(1);
+    object-fit:cover;
 
-    transition:.5s;
+    margin:0;
+    padding:0;
+
+}
+
+/* 3 Images Join */
+
+.industry-image.middle{
+
+    margin-top:-3px;
+
+}
+
+.industry-image.bottom{
+
+    margin-top:-3px;
 
 }
 
@@ -724,17 +747,17 @@ RIGHT SIDE IMAGES
 
 }
 
+/*
 .industry-image::after{
-
     content:"";
-
     position:absolute;
-
     inset:0;
-
-    background:rgba(0,0,0,.05);
-
+    background:linear-gradient(
+        rgba(0,0,0,.08),
+        rgba(0,0,0,.18)
+    );
 }
+*/
 
 /*==================================================
         INDUSTRIES WE SERVE
