@@ -644,120 +644,38 @@ LEFT SIDE
     transform:scale(1.12);
 }
 
-/*=========================================
-RIGHT SIDE IMAGES
-=========================================*/
+/* ===========================
+RIGHT SIDE SINGLE IMAGE
+=========================== */
 
 .industries-right{
-
-    position:absolute;
-
-    top:0;
-
-    right:-55px;          /* pushes image till border */
-
-    width:44%;
-
+    width:100%;
     height:100%;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:0;
-
-    padding:0;
-
-    margin:0;
-
 }
 
-.industry-image{
-
-    position:relative;
+.industry-image-full{
 
     width:100%;
-    height:230px;
-
-    margin:0;
-    padding:0;
-
+    height:100%;
     overflow:hidden;
 
-    border:none;
-    outline:none;
+    border-radius:18px;
 
-    border-radius:0;
-
-    box-shadow:none;
-
-    line-height:0;
-
-    display:block;
-
-    clip-path:polygon(
-        12% 0,
-        100% 0,
-        100% 100%,
-        12% 100%,
-        0 50%
-    );
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
 
 }
 
-.industry-image img{
+.industry-image-full img{
 
     width:100%;
+
     height:100%;
 
     display:block;
 
     object-fit:cover;
 
-    margin:0;
-    padding:0;
-
 }
-
-/* 3 Images Join */
-
-.industry-image.middle{
-
-    margin-top:-8px;
-
-}
-
-.industry-image.bottom{
-
-    margin-top:-8px;
-
-}
-
-/* only third image little zoom */
-
-.industry-image:last-child img{
-
-    transform:scale(1.12);
-
-}
-
-.industry-image:hover img{
-
-    transform:scale(1.16);
-
-}
-
-/*
-.industry-image::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        rgba(0,0,0,.08),
-        rgba(0,0,0,.18)
-    );
-}
-*/
 
 /*==================================================
         INDUSTRIES WE SERVE
@@ -812,31 +730,14 @@ Tablet
 }
 
 .industries-right{
-
     width:100%;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:10px;
-
+    display:block;
 }
 
-.industry-image{
-
+.industries-right img{
     width:100%;
-
-    flex:none;
-
-    margin-left:0 !important;
-
-}
-
-.industry-image img{
-
-    height:220px;
-
+    height:auto;
+    border-radius:15px;
 }
 
 .industries-grid{
@@ -890,41 +791,14 @@ Mobile
 }
 
 .industries-right{
-
-    position:relative;
-
-    right:0;
-
     width:100%;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:0;
-
+    display:block;
 }
 
-.industry-image{
-
-    height:180px;
-
+.industries-right img{
     width:100%;
-
-    clip-path:none;
-
-    border-radius:15px;
-
-}
-
-.industry-image img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
+    height:auto;
+    border-radius:12px;
 }
    
 }
