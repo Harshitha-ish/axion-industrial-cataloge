@@ -650,8 +650,6 @@ RIGHT SIDE SVG IMAGE
 
     align-items:center;
 
-    justify-content:center;
-
 }
 
 .industry-image-full{
@@ -662,18 +660,16 @@ RIGHT SIDE SVG IMAGE
 
     overflow:hidden;
 
-    position:relative;
-
     border-radius:18px;
 
-    box-shadow:0 18px 40px rgba(0,0,0,.18);
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
 
     clip-path:polygon(
-        14% 0,
-        100% 0,
+        14% 0%,
+        100% 0%,
         100% 100%,
         14% 100%,
-        0 50%
+        0% 50%
     );
 
 }
@@ -684,9 +680,9 @@ RIGHT SIDE SVG IMAGE
 
     height:100%;
 
-    display:block;
-
     object-fit:cover;
+
+    display:block;
 
     transition:.5s;
 
