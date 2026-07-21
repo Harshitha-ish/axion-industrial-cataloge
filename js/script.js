@@ -222,3 +222,32 @@ window.addEventListener("scroll", revealIndustries);
 
 revealIndustries();
 
+/*=========================================
+      OUR TRUSTED BRANDS
+=========================================*/
+
+const brandObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("active");
+
+        }
+
+    });
+
+},{
+    threshold:0.15
+});
+
+document.querySelectorAll(
+
+".brands-title, .brands-subtitle, .brand-card"
+
+).forEach((el)=>{
+
+    brandObserver.observe(el);
+
+});
