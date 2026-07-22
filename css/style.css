@@ -636,9 +636,9 @@ LEFT SIDE
     transform:scale(1.12);
 }
 
-/* ====================================
-RIGHT SIDE SVG IMAGE
-==================================== */
+/*=========================================
+RIGHT SIDE IMAGES
+=========================================*/
 
 .industries-right{
 
@@ -648,47 +648,53 @@ RIGHT SIDE SVG IMAGE
 
     display:flex;
 
-    align-items:center;
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    position:relative;
 
 }
 
-.industry-image-full{
+.industry-image{
 
-    width:100%;
+    position:relative;
 
-    height:620px;
+    flex:1;
 
     overflow:hidden;
 
-    border-radius:18px;
+    margin:0;
 
-    box-shadow:0 20px 45px rgba(0,0,0,.18);
+    padding:0;
+
+    transition:.4s ease;
 
     clip-path:polygon(
-        14% 0%,
-        100% 0%,
+        14% 0,
+        100% 0,
         100% 100%,
         14% 100%,
-        0% 50%
+        0 50%
     );
 
 }
 
-.industry-image-full img{
+.industry-image img{
 
     width:100%;
 
     height:100%;
 
-    object-fit:cover;
-
     display:block;
 
-    transition:.5s;
+    object-fit:cover;
+
+    transition:transform .6s ease;
 
 }
 
-.industry-image-full:hover img{
+.industry-image:hover img{
 
     transform:scale(1.08);
 
@@ -724,8 +730,18 @@ Laptop
 
 }
 
-.industry-image-full img{
-    height:220px;
+.industries-right{
+
+    height:560px;
+
+}
+
+.industry-image{
+
+    margin:0;
+
+    flex:1;
+
 }
 
 }
@@ -746,15 +762,23 @@ Tablet
 
 .industries-right{
 
-    height:450px;
+    display:flex;
+
+    flex-direction:column;
+
+    height:500px;
 
 }
 
-.industry-image-full{
+.industry-image{
 
-    height:450px;
+    flex:1;
 
     clip-path:none;
+
+    border-radius:16px;
+
+    margin-bottom:0;
 
 }
 
@@ -810,17 +834,33 @@ Mobile
 
 .industries-right{
 
-    height:300px;
+    height:360px;
+
+    display:flex;
+
+    flex-direction:column;
 
 }
 
-.industry-image-full{
+.industry-image{
 
-    height:300px;
+    flex:1;
 
     clip-path:none;
 
-    border-radius:15px;
+    border-radius:12px;
+
+    margin:0;
+
+}
+
+.industry-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
 
 }
    
@@ -852,7 +892,7 @@ Small Mobile
 
 }
 
-.industry-image-full img{
+.industry-image img{
     height:115px;
 }
 
