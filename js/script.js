@@ -226,28 +226,14 @@ revealIndustries();
       OUR TRUSTED BRANDS
 =========================================*/
 
-const brandObserver = new IntersectionObserver((entries)=>{
+const brandCards = document.querySelectorAll(".brand-card");
 
-    entries.forEach(entry=>{
+brandCards.forEach(card=>{
 
-        if(entry.isIntersecting){
+    card.addEventListener("mouseenter",()=>{
 
-            entry.target.classList.add("active");
-
-        }
+        card.style.transition="0.35s";
 
     });
-
-},{
-    threshold:0.15
-});
-
-document.querySelectorAll(
-
-".brands-title, .brands-subtitle, .brand-card"
-
-).forEach((el)=>{
-
-    brandObserver.observe(el);
 
 });
