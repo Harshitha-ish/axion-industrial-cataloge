@@ -643,22 +643,16 @@ RIGHT SIDE IMAGES
 .industries-right{
 
     width:100%;
-
-    height:720px;
+    height:620px;
 
     display:flex;
-
     flex-direction:column;
-
-    justify-content:flex-start;
 
     gap:0;
 
-    position:relative;
-
-    margin-right:-20px;
-
     overflow:hidden;
+
+    margin-right:-15px;
 
 }
 
@@ -666,7 +660,7 @@ RIGHT SIDE IMAGES
 
     position:relative;
 
-    flex:none;
+    flex:1;
 
     overflow:hidden;
 
@@ -674,10 +668,8 @@ RIGHT SIDE IMAGES
 
     padding:0;
 
-    transition:.4s ease;
-
     clip-path:polygon(
-        12% 0,
+        14% 0,
         100% 0,
         100% 100%,
         14% 100%,
@@ -688,43 +680,41 @@ RIGHT SIDE IMAGES
 
 .industry-image img{
 
-    width:100%;
+    width:100.5%;
 
-    height:100%;
+    height:101%;
 
     display:block;
 
     object-fit:cover;
 
-    transition:transform .6s ease;
+    transform:scale(1.02);
+
+    transition:.5s;
 
 }
 
-.industry-image.top{
+.industry-image.bottom img{
 
-    height:180px;
-
-}
-
-.industry-image.middle{
-
-    height:250px;
-
-    margin-top:-3px;
-
-}
-
-.industry-image.bottom{
-
-    height:290px;
-
-    margin-top:-3px;
+    transform:scale(1.15);
 
 }
 
 .industry-image:hover img{
 
-    transform:scale(1.08);
+    transform:scale(1.18);
+
+}
+
+.industries-right{
+
+    padding-right:0;
+
+}
+
+.industry-image{
+
+    margin-right:-8px;
 
 }
 
