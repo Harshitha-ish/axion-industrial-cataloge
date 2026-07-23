@@ -3136,21 +3136,19 @@ BOTTOM BLUE STRIP
 
 .warehouse-strip{
 
-    width:100%;
+    margin-top:60px;
 
     background:#0B4EA2;
 
-    padding:30px 40px;
+    border-radius:20px;
+
+    padding:35px;
 
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(5,1fr);
 
-    gap:30px;
-
-    align-items:center;
-
-    text-align:center;
+    gap:25px;
 
 }
 
