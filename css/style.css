@@ -2614,3 +2614,792 @@ min-height:840px;
     transform:scale(1.15);
 
 }
+
+/*=========================================
+WHY CHOOSE US
+=========================================*/
+
+.why-choose-section{
+    padding:90px 0 0;
+    background:#fff;
+}
+
+.why-choose-wrapper{
+    display:grid;
+    grid-template-columns:1fr 520px;
+    align-items:center;
+    gap:60px;
+}
+
+.why-left{
+    padding-right:20px;
+}
+
+.why-title{
+    font-size:48px;
+    font-weight:800;
+    color:#111;
+    margin-bottom:18px;
+    text-transform:uppercase;
+}
+
+.why-subtitle{
+    font-size:17px;
+    color:#555;
+    line-height:1.8;
+    margin-bottom:35px;
+    max-width:600px;
+}
+
+.why-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.why-list li{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:20px;
+    font-size:17px;
+    font-weight:500;
+    color:#222;
+}
+
+.why-list li i{
+    color:#0057d9;
+    font-size:20px;
+}
+
+/*============================
+RIGHT IMAGE
+============================*/
+
+.why-right{
+    position:relative;
+    height:560px;
+}
+
+.why-image{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    clip-path:polygon(
+        18% 0,
+        100% 0,
+        100% 100%,
+        18% 100%,
+        0 50%
+    );
+}
+
+.why-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.why-image:hover img{
+    transform:scale(1.08);
+}
+
+/*============================
+BOTTOM BLUE STRIP
+============================*/
+
+.strength-strip{
+    margin-top:0;
+    background:#0047b3;
+    padding:35px 40px;
+    color:#fff;
+}
+
+.strength-strip h3{
+    text-align:center;
+    font-size:26px;
+    font-weight:700;
+    margin-bottom:35px;
+    color:#fff;
+}
+
+.strength-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+}
+
+.strength-item{
+    text-align:center;
+    transition:.35s;
+}
+
+.strength-item i{
+    width:75px;
+    height:75px;
+    line-height:75px;
+    border:2px solid rgba(255,255,255,.35);
+    border-radius:50%;
+    font-size:30px;
+    margin-bottom:15px;
+    transition:.35s;
+}
+
+.strength-item span{
+    display:block;
+    font-size:15px;
+    font-weight:500;
+    line-height:1.5;
+}
+
+.strength-item:hover{
+    transform:translateY(-8px);
+}
+
+.strength-item:hover i{
+    background:#fff;
+    color:#0057d9;
+    border-color:#fff;
+}
+
+/*=========================================
+WHY CHOOSE US
+RESPONSIVE
+=========================================*/
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+.why-choose-wrapper{
+    grid-template-columns:1fr 450px;
+    gap:40px;
+}
+
+.why-title{
+    font-size:42px;
+}
+
+.why-right{
+    height:500px;
+}
+
+.strength-grid{
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+}
+
+}
+
+
+/* Tablet */
+
+@media (max-width:992px){
+
+.why-choose-wrapper{
+    grid-template-columns:1fr;
+    gap:40px;
+}
+
+.why-left{
+    text-align:center;
+    padding-right:0;
+}
+
+.why-subtitle{
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.why-list{
+    display:inline-block;
+    text-align:left;
+}
+
+.why-right{
+    width:100%;
+    height:420px;
+}
+
+.why-image{
+    clip-path:none;
+    border-radius:18px;
+}
+
+.strength-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.why-choose-section{
+    padding:60px 20px 0;
+}
+
+.why-title{
+    font-size:34px;
+}
+
+.why-subtitle{
+    font-size:15px;
+}
+
+.why-list li{
+    font-size:15px;
+}
+
+.why-right{
+    height:320px;
+}
+
+.strength-strip{
+    padding:30px 20px;
+}
+
+.strength-strip h3{
+    font-size:22px;
+}
+
+.strength-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.strength-item i{
+    width:65px;
+    height:65px;
+    line-height:65px;
+    font-size:24px;
+}
+
+}
+
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+.why-title{
+    font-size:28px;
+}
+
+.why-right{
+    height:260px;
+}
+
+.strength-grid{
+    grid-template-columns:1fr 1fr;
+}
+
+.strength-item span{
+    font-size:13px;
+}
+
+}
+
+
+/*=========================================
+SCROLL ANIMATION
+=========================================*/
+
+.why-left,
+.why-right,
+.strength-item{
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+
+}
+
+.why-left.show,
+.why-right.show,
+.strength-item.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+/*=========================================
+WAREHOUSE & LOGISTICS
+=========================================*/
+
+.warehouse-section{
+
+    padding:90px 0;
+
+    background:#ffffff;
+
+}
+
+/*==========================
+Heading
+==========================*/
+
+.warehouse-heading{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.warehouse-heading h2{
+
+    font-size:48px;
+
+    font-weight:800;
+
+    color:#111111;
+
+    margin-bottom:18px;
+
+    text-transform:uppercase;
+
+}
+
+.warehouse-heading p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:#555;
+
+}
+
+/*==========================
+Layout
+==========================*/
+
+.warehouse-wrapper{
+
+    display:grid;
+
+    grid-template-columns:520px 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+/*==========================
+LEFT IMAGE
+==========================*/
+
+.warehouse-left{
+
+    position:relative;
+
+    height:520px;
+
+}
+
+.warehouse-image{
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    clip-path:polygon(
+        18% 0,
+        100% 0,
+        100% 100%,
+        18% 100%,
+        0 50%
+    );
+
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+
+}
+
+.warehouse-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.warehouse-image:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================
+RIGHT CONTENT
+==========================*/
+
+.warehouse-right h3{
+
+    font-size:34px;
+
+    color:#0B4EA2;
+
+    margin-bottom:22px;
+
+}
+
+.warehouse-right p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:#555;
+
+    margin-bottom:30px;
+
+}
+
+.warehouse-right ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.warehouse-right ul li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:18px;
+
+    font-size:17px;
+
+    color:#222;
+
+    font-weight:500;
+
+}
+
+.warehouse-right ul li i{
+
+    color:#0B4EA2;
+
+    font-size:20px;
+
+}
+
+/*==========================
+BOTTOM BLUE STRIP
+==========================*/
+
+.warehouse-strip{
+
+    margin-top:60px;
+
+    background:#0B4EA2;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:25px;
+
+}
+
+.warehouse-box{
+
+    text-align:center;
+
+    color:#fff;
+
+    transition:.35s;
+
+}
+
+.warehouse-box i{
+
+    width:75px;
+
+    height:75px;
+
+    line-height:75px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    font-size:30px;
+
+    margin-bottom:16px;
+
+    transition:.35s;
+
+}
+
+.warehouse-box span{
+
+    display:block;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    line-height:1.6;
+
+}
+
+.warehouse-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.warehouse-box:hover i{
+
+    background:#fff;
+
+    color:#0B4EA2;
+
+    border-color:#fff;
+
+}
+
+/*=========================================
+WAREHOUSE & LOGISTICS RESPONSIVE
+=========================================*/
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+.warehouse-wrapper{
+
+    grid-template-columns:420px 1fr;
+
+    gap:40px;
+
+}
+
+.warehouse-heading h2{
+
+    font-size:42px;
+
+}
+
+.warehouse-left{
+
+    height:460px;
+
+}
+
+.warehouse-strip{
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:18px;
+
+}
+
+}
+
+
+/* Tablet */
+
+@media (max-width:992px){
+
+.warehouse-wrapper{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+.warehouse-left{
+
+    height:380px;
+
+}
+
+.warehouse-image{
+
+    clip-path:none;
+
+    border-radius:18px;
+
+}
+
+.warehouse-right{
+
+    text-align:center;
+
+}
+
+.warehouse-right ul{
+
+    display:inline-block;
+
+    text-align:left;
+
+}
+
+.warehouse-strip{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.warehouse-section{
+
+    padding:60px 20px;
+
+}
+
+.warehouse-heading h2{
+
+    font-size:30px;
+
+}
+
+.warehouse-heading p{
+
+    font-size:15px;
+
+}
+
+.warehouse-left{
+
+    height:280px;
+
+}
+
+.warehouse-right h3{
+
+    font-size:26px;
+
+}
+
+.warehouse-right p{
+
+    font-size:15px;
+
+}
+
+.warehouse-right ul li{
+
+    font-size:15px;
+
+}
+
+.warehouse-strip{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    padding:25px;
+
+}
+
+.warehouse-box i{
+
+    width:60px;
+
+    height:60px;
+
+    line-height:60px;
+
+    font-size:24px;
+
+}
+
+.warehouse-box span{
+
+    font-size:13px;
+
+}
+
+}
+
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+.warehouse-heading h2{
+
+    font-size:26px;
+
+}
+
+.warehouse-left{
+
+    height:220px;
+
+}
+
+.warehouse-strip{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+/*=========================================
+WAREHOUSE ANIMATION
+=========================================*/
+
+.warehouse-heading,
+.warehouse-left,
+.warehouse-right,
+.warehouse-box{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .8s ease;
+
+}
+
+.warehouse-heading.show,
+.warehouse-left.show,
+.warehouse-right.show,
+.warehouse-box.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
