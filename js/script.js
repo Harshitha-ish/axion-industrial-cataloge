@@ -237,3 +237,49 @@ brandCards.forEach(card=>{
     });
 
 });
+
+/* WHY CHOOSE US SCROLL ANIMATION */
+
+const whyItems = document.querySelectorAll(
+'.why-left,.why-right,.strength-item'
+);
+
+window.addEventListener("scroll",()=>{
+
+whyItems.forEach(item=>{
+
+const top=item.getBoundingClientRect().top;
+
+if(top<window.innerHeight-80){
+
+item.classList.add("show");
+
+}
+
+});
+
+});
+
+/*=========================================
+WAREHOUSE SCROLL ANIMATION
+=========================================*/
+
+const warehouseItems = document.querySelectorAll(
+'.warehouse-heading,.warehouse-left,.warehouse-right,.warehouse-box'
+);
+
+window.addEventListener("scroll",()=>{
+
+warehouseItems.forEach(item=>{
+
+const top=item.getBoundingClientRect().top;
+
+if(top < window.innerHeight-80){
+
+item.classList.add("show");
+
+}
+
+});
+
+});
