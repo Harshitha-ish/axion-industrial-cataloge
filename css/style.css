@@ -2620,7 +2620,7 @@ WHY CHOOSE US
 =========================================*/
 
 .why-choose-section{
-    padding:90px 0 0;
+    padding:0;
     background:#fff;
 }
 
@@ -2677,14 +2677,31 @@ RIGHT IMAGE
 ============================*/
 
 .why-right{
+
     position:relative;
+
     height:560px;
+
+    overflow:hidden;
+
+    margin:0;
+
+    padding:0;
+
 }
 
 .why-image{
+
     width:100%;
+
     height:100%;
+
     overflow:hidden;
+
+    margin:0;
+
+    padding:0;
+
     clip-path:polygon(
         18% 0,
         100% 0,
@@ -2692,17 +2709,27 @@ RIGHT IMAGE
         18% 100%,
         0 50%
     );
+
 }
 
 .why-image img{
+
     width:100%;
+
     height:100%;
+
     object-fit:cover;
+
+    transform:scale(1.12);
+
     transition:.6s;
+
 }
 
 .why-image:hover img{
-    transform:scale(1.08);
+
+    transform:scale(1.18);
+
 }
 
 /*============================
@@ -2710,10 +2737,17 @@ BOTTOM BLUE STRIP
 ============================*/
 
 .strength-strip{
-    margin-top:0;
+
+    margin:0;
+
+    width:100%;
+
     background:#0047b3;
-    padding:35px 40px;
+
+    padding:30px 25px;
+
     color:#fff;
+
 }
 
 .strength-strip h3{
