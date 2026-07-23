@@ -3016,13 +3016,9 @@ Layout
 
     grid-template-columns:520px 1fr;
 
-    gap:0;
+    gap:35px;
 
-    align-items:stretch;
-
-    overflow:hidden;
-
-    border-radius:22px 22px 0 0;
+    align-items:center;
 
 }
 
@@ -3037,6 +3033,8 @@ LEFT IMAGE
     margin:0;
 
     padding:0;
+
+    padding-right:35px;
 
 }
 
@@ -3138,15 +3136,21 @@ BOTTOM BLUE STRIP
 
 .warehouse-strip{
 
-    margin-top:0;
-
     width:100%;
 
     background:#0B4EA2;
 
-    padding:35px;
+    padding:30px 40px;
 
-    border-radius:0 0 22px 22px;
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    align-items:center;
+
+    text-align:center;
 
 }
 
